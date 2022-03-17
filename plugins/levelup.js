@@ -7,7 +7,7 @@ let handler = m => {
     let { min, xp, max } = levelling.xpRange(user.level, global.multiplier)
     throw `
 Level *${user.level} (${user.exp - min}/${xp})*
-Kurang *${max - user.exp}* lagi!
+Not enough *${max - user.exp}* lagi!
 `.trim()
   }
   let before = user.level * 1
@@ -22,20 +22,17 @@ Kurang *${max - user.exp}* lagi!
     })
     let name = this.getName(m.sender)
     let lvlnow = user.level
-    let teks = `Selamat ${name} naik 🧬level`
+    let teks = `Congratulations ${name} up level`
     let str = `
 ${teks} 
 
-• 🧬Level Sebelumnya : ${before}
-• 🧬Level Baru : ${lvlnow}
-• Pada Jam : ${time}
-
-*_Semakin sering berinteraksi dengan bot Semakin Tinggi level kamu_*
+• Previous Level : ${before}
+• New Levels : ${lvlnow}
+*_The more you interact with bots, the higher your level_*
 `.trim()
     if (global.support.convert || global.support.magick || global.support.gm) {
       let fontLevel = 'src/level_c.otf'
       let fontTexts = 'src/texts.otf'
-      let xtsx = 'src/lvlup_template.jpg'
       let anotations = '+1385+260' // gapake else if kadang error
       if (lvlnow > 2) anotations = '+1370+260'
       if (lvlnow > 10) anotations = '+1330+260'
