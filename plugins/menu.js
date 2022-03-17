@@ -148,7 +148,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
   ['Owner',  '/owner']
 ], { quoted: m}).catch(_ => conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m)).catch(_ => conn.reply(m.chat, text.trim(), m))
   } catch (e) {
-    conn.reply(m.chat, 'Maaf, menu sedang error', m)
+    conn.reply(m.chat, 'Sorry, the menu is in error', m)
     throw e
   }
 }
@@ -180,18 +180,18 @@ function clockString(ms) {
 }
 function ucapan() {
   const time = (new Date().getUTCHours() + 7) % 24
-  res = "Woi. Pagi"
+  res = "wow. Morning"
   if (time >= 4) {
-    res = "Selamat Pagi"
+    res = "Good morning"
   }
   if (time >= 12) {
-    res = "Selamat Siang"
+    res = "Good afternoon"
   }
   if (time >= 15) {
-    res = "Selamat Sore"
+    res = "Good afternoon"
   }
   if (time >= 19) {
-    res = "Selamat Malam"
+    res = "Good night"
   }
   return res
 }
