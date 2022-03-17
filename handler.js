@@ -43,17 +43,17 @@ module.exports = {
             if (!isNumber(user.pet)) user.pet = 0
         
             if (!isNumber(user.potion)) user.potion = 0
-            if (!isNumber(user.sampah)) user.sampah = 0
+            if (!isNumber(user.sampah)) user.rubbish = 0
             if (!isNumber(user.armor)) user.armor = 0
             
-            if (!isNumber(user.kucing)) user.kucing = 0
-            if (!isNumber(user.kucinglastclaim)) user.kucinglastclaim = 0
-            if (!isNumber(user.kuda)) user.kuda = 0
-            if (!isNumber(user.kudalastclaim)) user.kudalastclaim = 0
-            if (!isNumber(user.rubah)) user.rubah = 0
-            if (!isNumber(user.rubahlastclaim)) user.rubahlastclaim = 0
-            if (!isNumber(user.anjing)) user.anjing = 0
-            if (!isNumber(user.anjinglastclaim)) user.anjinglastclaim = 0
+            if (!isNumber(user.cat)) user.cat = 0
+            if (!isNumber(user.catlastclaim)) user.catlastclaim = 0
+            if (!isNumber(user.horse)) user.horse = 0
+            if (!isNumber(user.horselastclaim)) user.horselastclaim = 0
+            if (!isNumber(user.fox)) user.fox = 0
+            if (!isNumber(user.foxlastclaim)) user .foxlastclaim = 0
+            if (!isNumber(user.dog)) user.dog = 0
+            if (!isNumber(user.doglastclaim)) user.doglastclaim = 0
 
             if (!'banned' in user) user.banned = false
             if (!'bannedReason' in user) user.bannedReason = ''
@@ -62,11 +62,11 @@ module.exports = {
             if (!isNumber(user.afk)) user.afk = -1
             if (!'afkReason' in user) user.afkReason = ''
         
-            if (!isNumber(user.anakkucing)) user.anakkucing = 0
-            if (!isNumber(user.anakkuda)) user.anakkuda = 0
-            if (!isNumber(user.anakrubah)) user.anakrubah = 0
-            if (!isNumber(user.anakanjing)) user.anakanjing = 0
-            if (!isNumber(user.makananpet)) user.makananpet = 0
+            if (!isNumber(user.kitten)) user.kitten = 0
+            if (!isNumber(user.foal)) user.foal = 0
+            if (!isNumber(user.fox cub)) user.fox cub = 0
+            if (!isNumber(user.puppy)) user.puppy = 0
+            if (!isNumber(user.pet food)) user.pet food = 0
 
             if (!isNumber(user.antispam)) user.antispam = 0
             if (!isNumber(user.antispamlastclaim)) user.antispamlastclaim = 0
@@ -269,7 +269,7 @@ module.exports = {
           let isAccept = plugin.command instanceof RegExp ? // RegExp Mode?
             plugin.command.test(command) :
             Array.isArray(plugin.command) ? // Array?
-              plugin.command.some(cmd => cmd instanceof RegExp ? // RegExp in Array?
+              plugin.command.some(cmd => cmd instanceof RegExp ? // RegExp in Arrays?
                 cmd.test(command) :
                 cmd === command
               ) :
@@ -282,11 +282,11 @@ module.exports = {
           if (m.chat in global.DATABASE._data.chats || m.sender in global.DATABASE._data.users) {
             let chat = global.DATABASE._data.chats[m.chat]
             let user = global.DATABASE._data.users[m.sender]
-            if (!['unbanchat.js', 'link.js', 'pengumuman.js', 'creator.js'].includes(name) && chat && chat.isBanned && !isROwner) return // Except this
+            if (!['unbanchat.js', 'link.js', 'announcement.js', 'creator.js'].includes(name) && chat && chat.isBanned && !isROwner) return // Except this
             if (!['unbanuser.js', 'inv.js', 'link.js', 'creator.js', 'profile.js'].includes(name) && user && user.banned && !isROwner) {
-              if (!opts['msgifbanned']) m.reply(`*ANDA TERBANNED* ${user.bannedReason ? `\nKarena *${user.bannedReason}*` : ''}
+              if (!opts['msgifbanned']) m.reply(`*YOU'RE BANNED* ${user.bannedReason ? `\nBecause *${user.bannedReason}*` : ''}
 
-Hubungi: 
+Contact: 
 ${global.owner.map((v, i) => '*Owner ' + (i + 1) + ':* wa.me/' + v).join('\n') + '\n\n' + global.mods.map((v, i) => '*Moderator ' + (i + 1) + ':* wa.me/' + v).join('\n')}
 
 Kuy join group Official *${conn.getName(this.user.jid)}*: 
@@ -329,14 +329,14 @@ ${(global.linkGC).map((v, i) => '*Group ' + (i + 1) + '*\n' + v).join`\n\n`}
             fail('private', m, this)
             continue
           }
-          if (plugin.register == true && _user.registered == false) { // Butuh daftar?
+          if (plugin.register == true && _user.registered == false) { // Need a list?
             fail('unreg', m, this)
             continue
           }
 
           m.isCommand = true
           let xp = 'exp' in plugin ? parseInt(plugin.exp) : 15 // XP Earning per command
-          if (xp > 99999999999) m.reply('Ngecit -_-') // Hehehe
+          if (xp > 99999999999) m.reply('squeak -_-') // Hehehe
           else m.exp += xp
           if (!isPrems && plugin.limit && global.DATABASE._data.users[m.sender].limit < plugin.limit * 1) {
             this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy*`, m)
@@ -527,15 +527,15 @@ Untuk mematikan fitur ini, ketik
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    rowner: 'Perintah ini hanya dapat digunakan oleh _*OWWNER!1!1!*_',
-    owner: 'Perintah ini hanya dapat digunakan oleh _*Owner Bot*_!',
-    mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
-    premium: 'Perintah ini hanya untuk member _*Premium*_ !',
-    group: 'Perintah ini hanya dapat digunakan di grup!',
-    private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
-    admin: 'Perintah ini hanya untuk *Admin* grup!',
-    botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
-    unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Manusia.16*'
+    rowner: 'This command can only be used by _*OWWNER!1!1!*_',
+    owner: 'This command can only be used by _*Owner Bot*_!',
+    mods: 'This command can only be used by _*Moderator*_ !',
+    Premium: 'This order is only for members _*Premium*_ !',
+    group: 'This command can only be used in groups!',
+    private: 'This command can only be used in Private Chat!',
+    admin: 'This command is only for *Admin* group!',
+    botAdmin: 'Make bot as *Admin* to use this command!',
+    unreg: 'Please register to use this feature by typing:\n\n*#list of names.age*\n\nExample: *#list of Humans.16*'
   }[type]
   if (msg) return m.reply(msg)
 }
