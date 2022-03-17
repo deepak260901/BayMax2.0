@@ -45,56 +45,56 @@ let handler = async (m, { conn, usedPrefix }) => {
     let str = `
 Inventory *${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])}*
 
-Health: *${healt}*
-Armor: *${armor == 0 ? 'Tidak Punya' : '' || armor == 1 ? 'Leather Armor' : '' || armor == 2 ? 'Iron Armor' : '' || armor == 3 ? 'Gold Armor' : '' || armor == 4 ? 'Diamond Armor' : '' || armor == 5 ? 'Netherite Armor' : ''}*\n
-Money: *${money}*
-Level: *${level}*
-Exp: *${exp}*
+❤️Health: *${healt}*
+🛡️Armor: *${armor == 0 ? 'Do not have' : '' || armor == 1 ? 'Leather Armor' : '' || armor == 2 ? 'Iron Armor' : '' || armor == 3 ? 'Gold Armor' : '' || armor == 4 ? 'Diamond Armor' : '' || armor == 5 ? 'Netherite Armor' : ''}*\n
+💵Money: *${money}*
+〽️Level: *${level}*
+🚀Exp: *${exp}*
 
 *Inventory*
-Diamond: *${diamond}*
-Potion: *${potion}*
-Sampah: *${sampah}*
-Makanan Pet: *${makananpet}*
-Total inv: *${diamond + potion + sampah + makananpet}* item
+💎Diamond: *${diamond}*
+⚗️Potion: *${potion}*
+🗑️Rubbish: *${sampah}*
+🌮Food Pet: *${makananpet}*
+🎯Total inv: *${diamond + potion + sampah + makananpet}* item
 
 *Crate*
-Common: *${common}*
-Uncommon: *${uncommon}*
-Mythic: *${mythic}*
-Legendary: *${legendary}*
-Pet: *${pet}*
+🎁Common: *${common}*
+🎁Uncommon: *${uncommon}*
+🎁Mythic: *${mythic}*
+🎁Legendary: *${legendary}*
+🎁Pet: *${pet}*
 
 *Pet*
-Kuda: *${kuda == 0 ? 'Tidak Punya' : '' || kuda == 1 ? 'Level 1' : '' || kuda == 2 ? 'Level 2' : '' || kuda == 3 ? 'Level 3' : '' || kuda == 4 ? 'Level 4' : '' || kuda == 5 ? 'Level MAX' : ''}*
-Rubah: *${rubah == 0 ? 'Tidak Punya' : '' || rubah == 1 ? 'Level 1' : '' || rubah == 2 ? 'Level 2' : '' || rubah == 3 ? 'Level 3' : '' || rubah == 4 ? 'Level 4' : '' || rubah == 5 ? 'Level MAX' : ''}*
-Kucing: *${kucing == 0 ? 'Tidak Punya' : '' || kucing == 1 ? 'Level 1' : '' || kucing == 2 ? 'Level 2' : '' || kucing == 3 ? 'Level 3' : '' || kucing == 4 ? 'Level 4' : '' || kucing == 5 ? 'Level MAX' : ''}*\n\n
+🐴Horse: *${Horse == 0 ? 'Do not have' : '' || Horse == 1 ? 'Level 1' : '' || Horse == 2 ? 'Level 2' : '' || Horse == 3 ? 'Level 3' : '' || Horse == 4 ? 'Level 4' : '' || Horse == 5 ? 'Level MAX' : ''}*
+🦊Fox: *${fox == 0 ? 'Do not have' : '' || Fox == 1 ? 'Level 1' : '' || Fox == 2 ? 'Level 2' : '' || Fox == 3 ? 'Level 3' : '' || Fox == 4 ? 'Level 4' : '' || Fox == 5 ? 'Level MAX' : ''}*
+🐱Cat: *${cat == 0 ? 'Do not have' : '' || cat == 1 ? 'Level 1' : '' || cat == 2 ? 'Level 2' : '' || cat == 3 ? 'Level 3' : '' || cat == 4 ? 'Level 4' : '' || cat == 5 ? 'Level MAX' : ''}*\n\n
 *Proges*\n
 ╭────────────────
-│Level *${level}* To Level *${level + 1}*
-│Exp *${exp}* -> *${max}* [${math <= 0 ? `Ready to *${usedPrefix}levelup*` : `${math} XP left to levelup`}]
+│〽️Level *${level}* To Level *${level + 1}*
+│🚀Exp *${exp}* -> *${max}* [${math <= 0 ? `Ready to *${usedPrefix}levelup*` : `${math} XP left to levelup`}]
 ╰────────────────
 ╭────────────────
-│Rubah ${rubah == 0 ? 'Tidak Punya' : '' || rubah > 0 && rubah < 5 ? `Level *${rubah}* To level *${rubah + 1}*\n│Exp *${_rubah}* -> *${rubah * 100}*` : '' || rubah == 5 ? '*Max Level*' : ''}
+│🦊Fox ${fox == 0 ? 'Do not have' : '' || fox > 0 && fox < 5 ? `Level *${rubah}* To level *${fox + 1}*\n│Exp *${_fox}* -> *${fox * 100}*` : '' || fox == 5 ? '*Max Level*' : ''}
 ╰────────────────
 ╭────────────────
-│Kucing ${kucing == 0 ? 'Tidak Punya' : '' || kucing > 0 && kucing < 5 ? `Level *${kucing}* To level *${kucing + 1}*\n│Exp *${_kucing}* -> *${kucing * 100}*` : '' || kucing == 5 ? '*Max Level*' : ''}
+│🐱Cat ${kucing == 0 ? 'Do not have' : '' || cat > 0 && cat < 5 ? `Level *${cat}* To level *${cat + 1}*\n│Exp *${_cat}* -> *${cat * 100}*` : '' || cat == 5 ? '*Max Level*' : ''}
 ╰────────────────
 ╭────────────────
-│Kuda ${kuda == 0 ? 'Tidak Punya' : '' || kuda > 0 && kuda < 5 ? `Level *${kuda}* To level *${kuda + 1}*\n│Exp *${_kuda}* -> *${kuda * 100}*` : '' || kuda == 5 ? '*Max Level*' : ''}
+│🐴Horse ${horse == 0 ? 'Do not have' : '' || hores > 0 && horse < 5 ? `Level *${horse}* To level *${horse + 1}*\n│Exp *${_horse}* -> *${horse * 100}*` : '' || horse == 5 ? '*Max Level*' : ''}
 ╰────────────────
 
 
 *achievement*
-1.Top level *${userslevel.indexOf(m.sender) + 1}* dari *${userslevel.length}*
-2.Top Money *${usersmoney.indexOf(m.sender) + 1}* dari *${usersmoney.length}*
-3.Top Diamond *${usersdiamond.indexOf(m.sender) + 1}* dari *${usersdiamond.length}*
-4.Top Potion *${userspotion.indexOf(m.sender) + 1}* dari *${userspotion.length}*
-5.Top Common *${userscommon.indexOf(m.sender) + 1}* dari *${userscommon.length}*
-6.Top Uncommon *${usersuncommon.indexOf(m.sender) + 1}* dari *${usersuncommon.length}*
-7.Top Mythic *${usersmythic.indexOf(m.sender) + 1}* dari *${usersmythic.length}*
-8.Top Legendary *${userslegendary.indexOf(m.sender) + 1}* dari *${userslegendary.length}*
-9.Top Sampah *${userssampah.indexOf(m.sender) + 1}* dari *${userssampah.length}*
+1.Top level *${userslevel.indexOf(m.sender) + 1}* from *${userslevel.length}*
+2.Top Money *${usersmoney.indexOf(m.sender) + 1}* from *${usersmoney.length}*
+3.Top Diamond *${usersdiamond.indexOf(m.sender) + 1}* from *${usersdiamond.length}*
+4.Top Potion *${userspotion.indexOf(m.sender) + 1}* from *${userspotion.length}*
+5.Top Common *${userscommon.indexOf(m.sender) + 1}* from *${userscommon.length}*
+6.Top Uncommon *${usersuncommon.indexOf(m.sender) + 1}* from *${usersuncommon.length}*
+7.Top Mythic *${usersmythic.indexOf(m.sender) + 1}* from *${usersmythic.length}*
+8.Top Legendary *${userslegendary.indexOf(m.sender) + 1}* from *${userslegendary.length}*
+9.Top Sampah *${userssampah.indexOf(m.sender) + 1}* from *${userssampah.length}*
 \n${readMore}\n
 Warn: *${warn}*
 Banned: *No*
