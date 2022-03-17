@@ -43,7 +43,7 @@ const defaultMenu = {
 📱 Host Number: *@918981731437*
 ┗━━━━━━━━━━━━━━━━❀
 %readmore`.trimStart(),
-  header: '┏━━ ☾︎ %category ☽︎ ━━━━',
+  header: '┏━━「 %category 」━━━━',
   body: '  ┣☆ %cmd %islimit %isPremium',
   footer: '┗━━━━━━━━━━━━❀\n',
   after: `
