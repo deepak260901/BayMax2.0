@@ -7,43 +7,16 @@ let handler  = async (m, { conn, usedPrefix }) => {
   let uptime = clockString(_uptime) 
   let totalreg = Object.keys(global.DATABASE._data.users).length
   let old = Math.round(performance.now())
-  await m.reply('Wait Kakak!!')
+  await m.reply('wait reading Info!!')
   let neww = Math.round(performance.now())
   conn.reply(m.chat, `
-╠═〘 ${package.name} 〙 ═
-╠➥ *Versi:* ${package.version}
-╠➥ *HomePage:* ${(package.homepage ? package.homepage.url || package.homepage : '[unknown github url]')}
-╠➥ *Issue:* ${package.bugs.url}
-╠➥ *Prefix:* ' ${usedPrefix} '
-╠➥ *Menu:* ${usedPrefix}menu
-╠➥ *Ping:* ${neww - old} *ms*
-╠➥ *Total user:* ${totalreg} *user*
-╠➥ *Uptime:* ${uptime}
-║
-╠═〘 DONASI 〙 ═
-╠➥ Gopay: 085713964963
-╠➥ Indosat: 085713964963
-║
-╠═ Request? ${package.bugs.url}
-╠═ Official Group *${conn.user.name}* :
-${(global.linkGC).map((v, i) => '║ *Group ' + (i + 1) + '*\n║' + v).join`\n║\n`}
-║
-║${readMore}
-╠═〘 SYARAT & KETENTUAN Games-wabot 〙 ═
-╠➥ *KAMI TIDAK BERTANGGUNG*
-║   *JAWAB ATAS PENYALAH*
-║   *GUNAAN BOT*
-╠➥ *KAMI TIDAK BERTANGGUNG*
-║   *JAWAB ATAS KEBOCORAN DATA*
-║   *PRIBADI ANDA*
-╠➥ *KAMI AKAN MENYIMPAN DATA*
-║   *SEPERTI NOMER TELEPON*
-║   *ANDA DI DATABASE KAMI*
-║ 
-║ 
-╠═ ©2021 ${package.name}
-╠═ Script original by Nurutomo
-╠═〘 METRO BOT 〙 ═
+➪*Bot Name* %me
+➪ *Version:* ${package.version}
+➪ *Wa Web version:* 10.0
+➪ *Wa web Name:* SERVER TOSHIRO
+➪ *Browser:* Desktop
+➪ *Total user:* ${totalreg} *user*
+➪ *Uptime:* ${uptime}
 `.trim(), m)
 }
 handler.help = ['info']
