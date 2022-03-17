@@ -1,14 +1,11 @@
 let handler = async m => m.reply(`
-╭─「 Donasi • Pulsa 」
-│ • Indosat [085713964963]
-│ • Gopay [085713964963]
+╭─「 My YouTube and Instagram 」
+│ • Instagram: https://instagram.com/itz_toshiro12?utm_medium=copy_link
+│ • YouTube: https://youtube.com/channel/UCXpD5-zJKfNjB-RGFNq9FPA
 ╰────
-╭─「 Hubungi 」
-│ > Ingin donasi? Wa.me/6281390658325
-╰────
-`.trim()) // Tambah sendiri kalo mau
-handler.help = ['donasi']
+`.trim()) // subscribe and Follow my Instagram :)
+handler.help = ['support']
 handler.tags = ['info']
-handler.command = /^dona(te|si)$/i
+handler.command = /^support(te|si)$/i
 
 module.exports = handler
