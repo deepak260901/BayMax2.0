@@ -1,11 +1,11 @@
-console.log('Starting...')
+console.log('BayMax is Starting...')
 let { spawn } = require('child_process')
 let path = require('path')
 let fs = require('fs')
 let package = require('./package.json')
 const CFonts  = require('cfonts')
 CFonts.say('Lightweight\nWhatsApp Bot', {
-  font: 'chrome',
+  font: 'chrome (Toshiro)',
   align: 'center',
   gradient: ['red', 'magenta']
 })
