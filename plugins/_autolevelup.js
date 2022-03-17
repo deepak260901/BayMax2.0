@@ -17,20 +17,18 @@ module.exports = {
       })
       let name = this.getName(m.sender)
       let lvlnow = user.level
-      let teks = `Selamat ${name} naik level` // teks di gambar tidak bisa ditambahkan emoticon
+      let teks = `safe ${name} go on level` // the text in the image can't be added emoticons
       let str = `
 ${teks} 
 
-• 🧬Level Sebelumnya : ${before}
-• 🧬Level Baru : ${lvlnow}
-• Pada Jam : ${time}
+• Previous Level : ${before}
+• Level New  : ${lvlnow}
 
-*_Semakin sering berinteraksi dengan bot Semakin Tinggi level kamu_*
+**
 `.trim()
       if (global.support.convert || global.support.magick || global.support.gm) {
         let fontLevel = 'src/level_c.otf'
         let fontTexts = 'src/texts.otf'
-        let xtsx = 'src/lvlup_template.jpg'
         let bufs = []
         let anotations = '+1385+260' // gapake else if kadang error
         if (lvlnow > 2) anotations = '+1370+260'
