@@ -31,22 +31,21 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-╭─「 %me 」
-│ %ucapan, %name!
-│
-│ Tanggal: *%week %weton, %date*
-│ Tanggal Islam: *%dateIslamic*
-│ Waktu: *%time*
-│
-│ Uptime: *%uptime (%muptime)*
-│ Database: %rtotalreg of %totalreg
-│ Github:
-│ %github
-╰────
+┏━━━━━━━━━━━━━━━❀
+ 🕵️ Hello %name,
+┗━━━━━━━━━━━━━━━❀
+┏━━━━━━━━━━━━━━━❀
+🤖 Bot Name: *%me*
+🪀 Wa Web Name: *Server Toshiro*
+🥏 Wa web Version: *10.0*
+🧮 Uptime: *%uptime (%muptime)*
+💻 Browser: *Desktop*
+📱 Host Number: *@918981731437*
+┗━━━━━━━━━━━━━━━━❀
 %readmore`.trimStart(),
-  header: '╭─「 %category 」',
+  header: '┏━━「 %category  ━━━━',
   body: '│ • %cmd %islimit %isPremium',
-  footer: '╰────\n',
+  footer: '┗━━━━━━━━━━━━❀\n',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
