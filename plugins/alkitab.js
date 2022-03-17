@@ -1,7 +1,7 @@
 let fetch = require('node-fetch')
 let { JSDOM } = require('jsdom')
 let handler = async (m, { text, usedPrefix, command }) => {
-    if (!text) throw `uhm.. teksnya mana?\n\ncontoh:\n${usedPrefix + command} kejadian`
+    if (!text) throw `uhm.. where is the text?\n\example:\n${usedPrefix + command} incident`
     let res = await fetch(`https://alkitab.me/search?q=${encodeURIComponent(text)}`, {
         headers: {
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36"
@@ -21,8 +21,8 @@ let handler = async (m, { text, usedPrefix, command }) => {
 
     m.reply(result.map(v => `${v.title}\n${v.teks}`).join('\n────────\n'))
 }
-handler.help = ['alkitab'].map(v => v + ' <pencarian>')
+handler.help = ['Bible'].map(v => v + ' <pencarian>')
 handler.tags = ['internet']
-handler.command = /^(alkitab)$/i
+handler.command = /^(Bible)$/i
 
 module.exports = handler
