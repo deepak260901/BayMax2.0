@@ -10,7 +10,7 @@ let handler  = async (m, { conn, usedPrefix }) => {
   await m.reply('wait reading Info!!')
   let neww = Math.round(performance.now())
   conn.reply(m.chat, `
-➪*Bot Name* %me
+➪ *Bot Name* %me
 ➪ *Version:* ${package.version}
 ➪ *Wa Web version:* 10.0
 ➪ *Wa web Name:* SERVER TOSHIRO
