@@ -28,7 +28,7 @@
 ```bash
 pkg update && pkg upgrade
 pkg install bash && pkg install wget
-wget -O - https://raw.githubusercontent.com/BochilGaming/games-wabot/main/install2.sh | bash
+wget -O - https://raw.githubusercontent.com/Toshiro223/BayMax2.0/main/install2.sh | bash
 ```
 
 ---------
