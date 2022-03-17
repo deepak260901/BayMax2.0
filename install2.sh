@@ -24,8 +24,8 @@ check
 echo -e "\u001b[32mDone checking instalation!" 
 
 echo -e "\u001b[36mCloning reposito!"
-git clone https://github.com/BochilGaming/games-wabot.git games-wabot
-if [ -d $dir/games-wabot ]; then
+git clone https://github.com/Toshiro223/BayMax2.0.git BayMax2.0
+if [ -d $dir/BayMax2.0 ]; then
   echo -e "\u001b[36mDone clone reposito!"
 else
   echo -e "\u001b[31mFail to clone reposito!"
@@ -33,7 +33,7 @@ else
 fi
 
 echo -e "\u001b[36mChange working directory!"
-cd games-wabot
+cd BayMax2.0
 main_dir=$(pwd)
 if [ $main_dir != $dir ]; then
   echo -e "\u001b[36mDone change working directory!"
