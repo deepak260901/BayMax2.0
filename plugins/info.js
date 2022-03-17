@@ -15,6 +15,7 @@ let handler  = async (m, { conn, usedPrefix }) => {
 ➪ *Wa Web version:* 10.0
 ➪ *Wa web Name:* SERVER TOSHIRO
 ➪ *Browser:* Desktop
+➪ *Mode: ${global.opts}
 ➪ *Total user:* ${totalreg} *user*
 ➪ *Uptime:* ${uptime}
 `.trim(), m)
