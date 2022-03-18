@@ -1,7 +1,7 @@
 {
-  "name": "BayMax",
+  "name": "Toshiro",
   "version": "0.9.8",
-  "description": "Customizable WhatsApp Bot",
+  "description": "Is always here",
   "depecrated": false,
   "main": "index.js",
   "directories": {
