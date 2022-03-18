@@ -43,17 +43,17 @@ module.exports = {
             if (!isNumber(user.pet)) user.pet = 0
         
             if (!isNumber(user.potion)) user.potion = 0
-            if (!isNumber(user.sampah)) user.sampah = 0
+            if (!isNumber(user.sampah)) user.rubbish = 0
             if (!isNumber(user.armor)) user.armor = 0
             
-            if (!isNumber(user.kucing)) user.kucing = 0
-            if (!isNumber(user.kucinglastclaim)) user.kucinglastclaim = 0
-            if (!isNumber(user.kuda)) user.kuda = 0
-            if (!isNumber(user.kudalastclaim)) user.kudalastclaim = 0
-            if (!isNumber(user.rubah)) user.rubah = 0
-            if (!isNumber(user.rubahlastclaim)) user.rubahlastclaim = 0
-            if (!isNumber(user.anjing)) user.anjing = 0
-            if (!isNumber(user.anjinglastclaim)) user.anjinglastclaim = 0
+            if (!isNumber(user.kucing)) user.cat = 0
+            if (!isNumber(user.kucinglastclaim)) user.catlastclaim = 0
+            if (!isNumber(user.kuda)) user.horse = 0
+            if (!isNumber(user.kudalastclaim)) user.horselastclaim = 0
+            if (!isNumber(user.rubah)) user.fox = 0
+            if (!isNumber(user.rubahlastclaim)) user.foxlastclaim = 0
+            if (!isNumber(user.anjing)) user.dog = 0
+            if (!isNumber(user.anjinglastclaim)) user.doglastclaim = 0
 
             if (!'banned' in user) user.banned = false
             if (!'bannedReason' in user) user.bannedReason = ''
@@ -62,17 +62,17 @@ module.exports = {
             if (!isNumber(user.afk)) user.afk = -1
             if (!'afkReason' in user) user.afkReason = ''
         
-            if (!isNumber(user.anakkucing)) user.anakkucing = 0
-            if (!isNumber(user.anakkuda)) user.anakkuda = 0
+            if (!isNumber(user.anakkucing)) user.kitten = 0
+            if (!isNumber(user.anakkuda)) user.foal = 0
             if (!isNumber(user.anakrubah)) user.anakrubah = 0
-            if (!isNumber(user.anakanjing)) user.anakanjing = 0
-            if (!isNumber(user.makananpet)) user.makananpet = 0
+            if (!isNumber(user.anakanjing)) user.puppy = 0
+            if (!isNumber(user.makananpet)) user.foodpet = 0
 
             if (!isNumber(user.antispam)) user.antispam = 0
             if (!isNumber(user.antispamlastclaim)) user.antispamlastclaim = 0
 
-            if (!isNumber(user.kayu)) user.kayu = 0
-            if (!isNumber(user.batu)) user.batu = 0
+            if (!isNumber(user.kayu)) user.wood = 0
+            if (!isNumber(user.batu)) user.stone = 0
             if (!isNumber(user.string)) user.string = 0
             if (!isNumber(user.sword)) user.sword = 0
             if (!isNumber(user.sworddurability)) user.sworddurability = 0
@@ -113,30 +113,30 @@ module.exports = {
             legendary: 0,
             pet: 0,
             potion: 0,
-            sampah: 0,
+            rubbish: 0,
             armor: 0,
-            kucing: 0,
-            kucinglastclaim: 0,
-            kuda: 0,
-            kudalastclaim: 0,
-            rubah: 0,
-            rubahlastclaim: 0,
-            anjing: 0,
-            anjinglastclaim: 0,
+            cat: 0,
+            catlastclaim: 0,
+            horse: 0,
+            horselastclaim: 0,
+            Fox: 0,
+            foxlastclaim: 0,
+            dog: 0,
+            doglastclaim: 0,
             Banneduser: false,
             BannedReason: '',
             warn: 0,
             afk: -1,
             afkReason: '',
-            anakkucing: 0,
-            anakkuda: 0,
-            anakrubah: 0,
+            kitten: 0,
+            foal: 0,
+            fox: 0,
             anakanjing: 0,
             makananpet: 0,
             antispam: 0,
             antispamlastclaim: 0,
-            kayu: 0,
-            batu: 0,
+            wood: 0,
+            rock: 0,
             string: 0,
             sword: 0,
             sworddurability: 0,
@@ -284,7 +284,7 @@ module.exports = {
             let user = global.DATABASE._data.users[m.sender]
             if (!['unbanchat.js', 'link.js', 'pengumuman.js', 'creator.js'].includes(name) && chat && chat.isBanned && !isROwner) return // Except this
             if (!['unbanuser.js', 'inv.js', 'link.js', 'creator.js', 'profile.js'].includes(name) && user && user.banned && !isROwner) {
-              if (!opts['msgifbanned']) m.reply(`*ANDA TERBANNED* ${user.bannedReason ? `\nKarena *${user.bannedReason}*` : ''}
+              if (!opts['msgifbanned']) m.reply(`*YOU'RE BANNED* ${user.bannedReason ? `\nBecause *${user.bannedReason}*` : ''}
 
 Hubungi: 
 ${global.owner.map((v, i) => '*Owner ' + (i + 1) + ':* wa.me/' + v).join('\n') + '\n\n' + global.mods.map((v, i) => '*Moderator ' + (i + 1) + ':* wa.me/' + v).join('\n')}
@@ -329,7 +329,7 @@ ${(global.linkGC).map((v, i) => '*Group ' + (i + 1) + '*\n' + v).join`\n\n`}
             fail('private', m, this)
             continue
           }
-          if (plugin.register == true && _user.registered == false) { // Butuh daftar?
+          if (plugin.register == true && _user.registered == false) { // Need a list?
             fail('unreg', m, this)
             continue
           }
@@ -390,7 +390,8 @@ ${(global.linkGC).map((v, i) => '*Group ' + (i + 1) + '*\n' + v).join`\n\n`}
                 console.error(e)
               }
             }
-            if (m.limit) m.reply(+ m.limit + ' Limit terpakai')
+            if (m.limit) m.reply(+ m.limit + ' Limit used
+')
           }
           break
         }
@@ -481,9 +482,9 @@ ${(global.linkGC).map((v, i) => '*Group ' + (i + 1) + '*\n' + v).join`\n\n`}
     let chat = global.DATABASE._data.chats[m.key.remoteJid]
     if (chat.delete) return
     await this.reply(m.key.remoteJid, `
-Terdeteksi @${m.participant.split`@`[0]} telah menghapus pesan
+Detected @${m.participant.split`@`[0]} deleted message
 
-Untuk mematikan fitur ini, ketik
+To turn off this feature, type
 *.enable delete*
 `.trim(), m.message, {
       contextInfo: {
@@ -521,21 +522,21 @@ Untuk mematikan fitur ini, ketik
       
       await this.send(`${tag},${JSON.stringify(NodePayload)}`)
     }
-    await this.sendMessage(from, 'Maaf, Tolong jangan telfon BOT!!', MessageType.extendedText)
+    await this.sendMessage(from, 'Sorry, Please don't call BOT!!', MessageType.extendedText)
   }
 }
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    rowner: 'Perintah ini hanya dapat digunakan oleh _*OWWNER!1!1!*_',
-    owner: 'Perintah ini hanya dapat digunakan oleh _*Owner Bot*_!',
-    mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
-    premium: 'Perintah ini hanya untuk member _*Premium*_ !',
-    group: 'Perintah ini hanya dapat digunakan di grup!',
-    private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
-    admin: 'Perintah ini hanya untuk *Admin* grup!',
-    botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
-    unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Manusia.16*'
+    rowner: 'This command can only be used by _*OWWNER!1!1!*_',
+    owner: 'This command can only be used by _*Owner Bot*_!',
+    mods: 'This command can only be used by _*Moderator*_ !',
+    premium: 'This command is only for _*Premium*_ members!',
+    group: 'This command can only be used in groups!',
+    private: 'This command can only be used in Private Chat!',
+    admin: 'This command is only for *Admin* group!',
+    botAdmin: 'Make bot as *Admin* to use this command!',
+    unreg: 'Please register to use this feature by typing:\n\n*#list of names.age*\n\nExample: *#list of Humans.16*'
   }[type]
   if (msg) return m.reply(msg)
 }
