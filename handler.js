@@ -528,10 +528,10 @@ To turn off this feature, type
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    rowner: 'This command can only be used by _*OWWNER!1!1!*_',
-    owner: 'This command can only be used by _*Owner Bot*_!',
-    mods: 'This command can only be used by _*Moderator*_ !',
-    premium: 'This command is only for _*Premium*_ members!',
+    rowner: 'This command can only be used by_*OWWNER!1!1!*_',
+    owner: 'This command can only be used by_*Owner Bot*_!',
+    mods: 'This command can only be used by_*Moderator*_ !',
+    premium: 'This command is only for_*Premium*_ members!',
     group: 'This command can only be used in groups!',
     private: 'This command can only be used in Private Chat!',
     admin: 'This command is only for *Admin* group!',
