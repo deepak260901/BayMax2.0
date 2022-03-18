@@ -531,7 +531,7 @@ global.dfail = (type, m, conn) => {
     rowner: 'command can only be used by_OWWNER!1!1!_',
     owner: 'command can only be used by_Owner Bot_!',
     mods: 'command can only be used by_Moderator_ !',
-    premium: 'command is only for_Premium_ members!',
+    premium: ',command is only for_Premium_ members!',
     group: 'command can only be used in groups!',
     private: 'command can only be used in Private Chat!',
     admin: 'command is only for Admin group!',
