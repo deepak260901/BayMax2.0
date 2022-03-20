@@ -56,7 +56,7 @@ Inventory *${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[
 ⚗️Potion: *${potion}*
 🗑️Rubbish: *${sampah}*
 🌮Food Pet: *${makananpet}*
-🎯Total inv: *${diamond + potion + sampah + makananpet}* item
+🎯Total inv: *${diamond + potion + rubbish + pet food}* item
 
 *Crate*
 🎁Common: *${common}*
@@ -68,7 +68,7 @@ Inventory *${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[
 *Pet*
 🐴Horse: *${Horse == 0 ? 'Do not have' : '' || Horse == 1 ? 'Level 1' : '' || Horse == 2 ? 'Level 2' : '' || Horse == 3 ? 'Level 3' : '' || Horse == 4 ? 'Level 4' : '' || Horse == 5 ? 'Level MAX' : ''}*
 🦊Fox: *${fox == 0 ? 'Do not have' : '' || Fox == 1 ? 'Level 1' : '' || Fox == 2 ? 'Level 2' : '' || Fox == 3 ? 'Level 3' : '' || Fox == 4 ? 'Level 4' : '' || Fox == 5 ? 'Level MAX' : ''}*
-🐱Cat: *${cat == 0 ? 'Do not have' : '' || cat == 1 ? 'Level 1' : '' || cat == 2 ? 'Level 2' : '' || cat == 3 ? 'Level 3' : '' || cat == 4 ? 'Level 4' : '' || cat == 5 ? 'Level MAX' : ''}*\n\n
+🐱Cat: *${cat == 0 ? 'Do not have' : '' || Cat == 1 ? 'Level 1' : '' || Cat == 2 ? 'Level 2' : '' || Cat == 3 ? 'Level 3' : '' || Cat == 4 ? 'Level 4' : '' || Cat == 5 ? 'Level MAX' : ''}*\n\n
 *Proges*\n
 ╭────────────────
 │〽️Level *${level}* To Level *${level + 1}*
@@ -78,7 +78,7 @@ Inventory *${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[
 │🦊Fox ${fox == 0 ? 'Do not have' : '' || fox > 0 && fox < 5 ? `Level *${rubah}* To level *${fox + 1}*\n│Exp *${_fox}* -> *${fox * 100}*` : '' || fox == 5 ? '*Max Level*' : ''}
 ╰────────────────
 ╭────────────────
-│🐱Cat ${kucing == 0 ? 'Do not have' : '' || cat > 0 && cat < 5 ? `Level *${cat}* To level *${cat + 1}*\n│Exp *${_cat}* -> *${cat * 100}*` : '' || cat == 5 ? '*Max Level*' : ''}
+│🐱Cat ${kucing == 0 ? 'Do not have' : '' || cat > 0 && cat < 5 ? `Level *${Cat}* To level *${cat + 1}*\n│Exp *${_cat}* -> *${cat * 100}*` : '' || cat == 5 ? '*Max Level*' : ''}
 ╰────────────────
 ╭────────────────
 │🐴Horse ${horse == 0 ? 'Do not have' : '' || hores > 0 && horse < 5 ? `Level *${horse}* To level *${horse + 1}*\n│Exp *${_horse}* -> *${horse * 100}*` : '' || horse == 5 ? '*Max Level*' : ''}
