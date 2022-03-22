@@ -31,14 +31,13 @@ let tags = {
 const defaultMenu = {
   before: `
 ╔════════════════❀
- 🕵️ Hello %name,
+  🕵️ Hello %name,
 ╚════════════════❀
 ╔════════════════❀
 🤖 Bot Name: *%me*
 🪀 Wa Web Name: *Server Toshiro*
 🥏 Wa web Version: *10.0*
 🧮 Uptime: *%uptime (%muptime)*
-💻 Browser: *Desktop*
 📱 Host Number: *@918981731437*
 ╚════════════════❀
 %readmore`.trimStart(),
