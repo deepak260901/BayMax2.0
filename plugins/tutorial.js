@@ -4,20 +4,20 @@ let handler  = async (m, { conn, usedPrefix }) => {
 │ 
 │〘 Tutorial EPIC RPG 〙
 │• *${usedPrefix}claim*
-│   Staterpack yang bisa di klaim 
-│   12 jam sekali
-│• *${usedPrefix}mulung*
+│   Claimable starterpack
+│   every 12 hours
+│• *${usedPrefix}naughty*
 │• *${usedPrefix}adventure*
-│• *${usedPrefix}petualang*
-│   Untuk mencari resource seperti 
-│   Money, Exp, dll..,dibutuhkan  
-│   minimal 80 nyawa untuk bisa 
-│   melakukannya dan, kamu tidak 
-│   dapat spam karena ada delay 5 
-│   menit
+│• *${usedPrefix}adventurer*
+│   To find resources like
+│ Money, Exp, etc...,required
+│ at least 80 lives to get
+│ do and, you don't
+│ get spam because there is a delay of 5
+│ minute
 │• *${usedPrefix}use potion <jumlah>*
-│   Untuk memakai potion/untuk 
-│   mengisi nyawa/health
+│    To use potions/for
+│   fill life/health
 │• *${usedPrefix}shop buy potion <jumlah>*
 │   Untuk membeli potion dan ketik 
 │   *${usedPrefix}use potion <jumlah>*
