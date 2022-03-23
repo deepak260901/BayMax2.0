@@ -10,8 +10,8 @@ let handler = async (m, { text }) => {
         return `
 ${1 + index}. *${repo.full_name}*${repo.fork ? ' (fork)' : ''}
 _${repo.html_url}_
-_Dibuat pada *${formatDate(repo.created_at)}*_
-_Terakhir update pada *${formatDate(repo.updated_at)}*_
+_Made on *${formatDate(repo.created_at)}*_
+_Last update on *${formatDate(repo.updated_at)}*_
 👁  ${repo.watchers}   🍴  ${repo.forks}   ⭐  ${repo.stargazers_count}
 ${repo.open_issues} Issue${repo.description ? `
 *Deskripsi:*\n${repo.description}` : ''}
