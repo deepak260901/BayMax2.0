@@ -41,6 +41,8 @@ const defaultMenu = {
 🤖 Bot Name: *%me*
 🪀 Wa Web Name: *Server Toshiro*
 🥏 Wa web Version: *10.0*
+💬 Group Chats: *${groups.length}*
+🌐 Personal chats: *${chats.length - groups.length}*
 🧮 Uptime: *%uptime (%muptime)*
 ╚════════════════❀
 %readmore`.trimStart(),
