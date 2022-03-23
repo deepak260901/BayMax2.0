@@ -1,8 +1,8 @@
 let handler  = async (m, { conn, usedPrefix }) => {
   conn.reply(m.chat, `
-╭─「 *Tutorial Main METRO BOT* 」
+╭─「 *🎮Game🎮* 」
 │ 
-│〘 Tutorial EPIC RPG 〙
+│〘 EPIC RPG MENU 〙
 │• *${usedPrefix}claim*
 │   Claimable starterpack
 │   every 12 hours
@@ -19,11 +19,11 @@ let handler  = async (m, { conn, usedPrefix }) => {
 │    To use potions/for
 │   fill life/health
 │• *${usedPrefix}shop buy potion <jumlah>*
-│   Untuk membeli potion dan ketik 
+│  To buy a potion and type 
 │   *${usedPrefix}use potion <jumlah>*
-│   untuk menggunakan potion
+│   to use potions
 │• *${usedPrefix}shop <args>*
-│   Untuk membeli atau menjual sesuatu
+│   To buy or sell something
 │• *${usedPrefix}shop buy <crate> <jumlah>*
 │   Untuk membeli Crate
 │• *${usedPrefix}profile*
@@ -38,13 +38,12 @@ let handler  = async (m, { conn, usedPrefix }) => {
 │   *_Jangan judi, Karena gk bakal_*
 │   *_balik modal.BENERAN GK BOHONG_*
 │  
-│*©Metro Bot 2020-2021*
-╰─「 *Tutorial Main METRO BOT* 」
+╰─「 *🎮GAME MENU🎮* 」
 `.trim(), m)
 }
-handler.help = ['tutorial']
-handler.tags = ['about']
-handler.command = /^(tutorial)$/i
+handler.help = ['Game']
+handler.tags = ['rpg']
+handler.command = /^(game)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
