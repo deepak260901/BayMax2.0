@@ -44,8 +44,6 @@ const defaultMenu = {
   body: '  ║☆ %cmd %islimit %isPremium',
   footer: '╚════════════❀\n',
   after: `
-*%npmname@^%version*
-${'```%npmdesc```'}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
