@@ -1,7 +1,7 @@
 {
-  "name": "Toshiro",
-  "version": "0.9.8",
-  "description": "Is always here",
+  "name": "Toshiro Bot",
+  "version": "0.1.1",
+  "description": "",
   "depecrated": false,
   "main": "index.js",
   "directories": {
