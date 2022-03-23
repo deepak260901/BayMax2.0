@@ -1,4 +1,8 @@
 let fs = require('fs')
+let handler = async (m, { conn }) => {
+  const chats = conn.chats.all()
+  const groups = chats.filter(v => v.jid.endsWith('g.us'))
+  const groupsIn = groups.filter(v => !v.read_only)
 let path = require('path')
 let levelling = require('../lib/levelling')
 let tags = {
