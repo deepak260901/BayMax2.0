@@ -38,7 +38,6 @@ const defaultMenu = {
 🪀 Wa Web Name: *Server Toshiro*
 🥏 Wa web Version: *10.0*
 🧮 Uptime: *%uptime (%muptime)*
-📱 Host Number: *@918981731437*
 ╚════════════════❀
 %readmore`.trimStart(),
   header: '╔══「 %category 」══❀',
