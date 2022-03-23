@@ -1,8 +1,4 @@
 let fs = require('fs')
-let handler = async (m, { conn }) => {
-  const chats = conn.chats.all()
-  const groups = chats.filter(v => v.jid.endsWith('g.us'))
-  const groupsIn = groups.filter(v => !v.read_only)
 let path = require('path')
 let levelling = require('../lib/levelling')
 let tags = {
@@ -41,9 +37,8 @@ const defaultMenu = {
 🤖 Bot Name: *%me*
 🪀 Wa Web Name: *Server Toshiro*
 🥏 Wa web Version: *10.0*
-💬 Group Chats: *${groups.length}*
-🌐 Personal chats: *${chats.length - groups.length}*
 🧮 Uptime: *%uptime (%muptime)*
+📱 Host Number: @918900351367
 ╚════════════════❀
 %readmore`.trimStart(),
   header: '╔══「 %category 」══❀',
