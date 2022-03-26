@@ -1,10 +1,10 @@
 let { MessageType } = require('@adiwajshing/baileys')
 let handler = async (m, { conn, text }) => {
     conn.req = conn.req ? conn.req : {}
-    if (!text) return conn.reply(m.chat, 'Mau request apa an?', m) 
+    if (!text) return conn.reply(m.chat, 'What do you want to report?', m) 
     let name = conn.getName(m.sender)
-    let _text = ('*dari:* ' + name + '\n*No:* ' + m.sender.split`@`[0] + '\nRequest:')
-    conn.reply(m.chat, 'Pesan Anda sudah terkirim', m)
+    let _text = (from:* ' + name + '\n*No:* ' + m.sender.split`@`[0] + '\nRequest:')
+    conn.reply(m.chat, 'Your message has been sent', m)
     conn.req[m.sender] = {
         name,
         text,
