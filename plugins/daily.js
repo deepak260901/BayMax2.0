@@ -47,7 +47,7 @@ function button(teks, user) {
 
     const buttonMessage = {
         contentText: teks,
-        footerText: '©games-wabot',
+        footerText: '©ZeroTwo 2022',
         buttons: buttons,
         headerType: 1
     }
