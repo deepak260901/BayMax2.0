@@ -44,7 +44,7 @@ Mʏ ᴘʀᴇғɪx:- /
   header: '❀══━❰ %category ❱━══❀',
   body: '〽️ %cmd %islimit %isPremium',
   footer: '❀════════════❀\n',
-  after: `
+  after: `ゼロツー❤️
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
