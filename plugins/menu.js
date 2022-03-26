@@ -30,18 +30,13 @@ let tags = {
 }
 const defaultMenu = {
   before: `
+
+(❤️ω❤️)Kᴏɴɴɪᴄʜɪᴡᴀ %name ᴅᴀʀʟɪɴɢ👋🏻 ɪ ᴀᴍ %me!,
+
 ╔════════════════❀
-  🕵️ Hello %name,
-╚════════════════❀
-╔════════════════❀
-🤖 Bot Name: *%me*
-🪀 Wa Web Name: *Server Toshiro*
-🥏 Wa web Version: *10.0*
-🧮 Uptime: *%uptime (%muptime)*
-📱 Host Number: @918900351367
 ╚════════════════❀
 %readmore`.trimStart(),
-  header: '╔══「 %category 」══❀',
+  header: '╔━❰ %category ❱━══',
   body: '  ║☆ %cmd %islimit %isPremium
   footer: '╚════════════❀\n',
   after: `
