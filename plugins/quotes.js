@@ -1,105 +1,105 @@
-let handler  = async (m, { conn }) => {
-  conn.reply(m.chat,`“${pickRandom(global.quotes)}”`, m)
-}
-handler.help = ['quotes']
-handler.tags = ['quotes']
-handler.command = /^(quotes)$/i
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
+let handler = async(m, { conn }) => {
+   conn.reply(m.chat,`“${pickRandom(global.quotes)}”`, m)
+ }
+ handler.help = ['quotes']
+ handler.tags = ['quotes']
+ handler.command = /^(quotes)$/i
+ handler.owner = false
+ handler.mods = false
+ handler.premium = false
+ handler.group = false
+ handler.private = false
 
-handler.admin = false
-handler.botAdmin = false
+ handler.admin = false
+ handler.botAdmin = false
 
-handler.fail = null
+ handler.fail = null
 
-module.exports = handler
+ module.exports = handler
 
-function pickRandom(list) {
-  return list[Math.floor(list.length * Math.random())]
-}
+ function pickRandom(list) {
+   return list[Math.floor(list.length * Math.random())]
+ }
 
-// https://jalantikus.com/tips/kata-kata-bucin/
-global.quotes = [
-    "Segala sesuatu memiliki kesudahan, yang sudah berakhir biarlah berlalu dan yakinlah semua akan baik-baik saja", 
-    "Setiap detik sangatlah berharga karena waktu mengetahui banyak hal, termasuk rahasia hati.", 
-    "Jika kamu tak menemukan buku yang kamu cari di rak, maka tulislah sendiri.",
-    "Jika hatimu banyak merasakan sakit, maka belajarlah dari rasa sakit itu untuk tidak memberikan rasa sakit pada orang lain.",
-    "Hidup tak selamanya tentang pacar.",
-    "Rumah bukan hanya sebuah tempat, tetapi itu adalah perasaan.",
-    "Pilih mana: Orang yang memimpikan kesuksesan atau orang yang membuatnya menjadi kenyataan?",
-    "Kamu mungkin tidak bisa menyiram bunga yang sudah layu dan berharap ia akan mekar kembali, tapi kamu bisa menanam bunga yang baru dengan harapan yang lebih baik dari sebelumnya.",
-    "Bukan bahagia yang menjadikan kita bersyukur, tetapi dengan bersyukurlah yang akan menjadikan hidup kita bahagia.",
-    "Aku memang diam. Tapi aku tidak buta.",
-    "Keyakinan merupakan suatu pengetahuan di dalam hati, jauh tak terjangkau oleh bukti.",
-    "Rasa bahagia dan tak bahagia bukan berasal dari apa yang kamu miliki, bukan pula berasal dari siapa diri kamu, atau apa yang kamu kerjakan. Bahagia dan tak bahagia berasal dari pikiran kamu.",
-    "Sakit dalam perjuangan itu hanya sementara. Bisa jadi kamu rasakan dalam semenit, sejam, sehari, atau setahun. Namun jika menyerah, rasa sakit itu akan terasa selamanya.",
-    "Hanya seseorang yang takut yang bisa bertindak berani. Tanpa rasa takut itu tidak ada apapun yang bisa disebut berani.",
-    "Jadilah diri kamu sendiri. Siapa lagi yang bisa melakukannya lebih baik ketimbang diri kamu sendiri?",
-    "Kesempatan kamu untuk sukses di setiap kondisi selalu dapat diukur oleh seberapa besar kepercayaan kamu pada diri sendiri.",
-    "Kebanggaan kita yang terbesar adalah bukan tidak pernah gagal, tetapi bangkit kembali setiap kali kita jatuh.",
-    "Suatu pekerjaan yang paling tak kunjung bisa diselesaikan adalah pekerjaan yang tak kunjung pernah dimulai.",
-    "Pikiran kamu bagaikan api yang perlu dinyalakan, bukan bejana yang menanti untuk diisi.",
-    "Kejujuran adalah batu penjuru dari segala kesuksesan. Pengakuan adalah motivasi terkuat. Bahkan kritik dapat membangun rasa percaya diri saat “disisipkan” di antara pujian.",
-    "Hidup ini hanya sekali dan peluang itu juga sekali munculnya, keduanya tidak datang dua kali.",
-    "Karena perjuangan adalah tanda perjalananmu menuju sukses.",
-    "Dunia tak lagi sama tak selamanya memihak kita, di saat kita mau berusaha di situlah kebahagiaan akan indah pada waktunya.",
-    "Hidup tak semudah membalikkan telapak tangan, tetapi dengan telapak tangan kita dapat mengubah hidup kita jauh lebih baik lagi.",
-    "Jadilah pribadi yang menantang masa depan, bukan pengecut yang aman di zona nyaman.",
-    "Belajarlah rendah hati, rendahkan hatimu serendah-rendahnya hingga tidak ada seorangpun yang bisa merendahkanmu.",
-    "Keyakinan merupakan suatu pengetahuan di dalam hati, jauh tak terjangkau oleh bukti.",
-    "Sakit dalam perjuangan itu hanya sementara. Bisa jadi kamu rasakan dalam semenit, sejam, sehari, atau setahun. Namun jika menyerah, rasa sakit itu akan terasa selamanya.",
-    "Kekuatan dan perkembangan datang hanya dari usaha dan perjuangan yang terus menerus.",
-    "Pengusaha itu bukan orang yang pintar tetapi mereka pintar mencari orang pintar.",
-    "Hidup itu sebentar. Kamu harus bisa tersenyum saat merasakan kepedihan atau kita tak akan pernah melanjutkan hidup.",
-    "Yang keren itu bukan anak muda yang banyak gaya, tapi anak muda yang banyak karya.",
-    "Hanya seseorang yang takut yang bisa bertindak berani. Tanpa rasa takut itu tidak ada apapun yang bisa disebut berani.",
-    "Siapapun yang berusaha menjatuhkanmu memang sudah berada di bawahmu.",
-    "Kesuksesan dan kegagalan adalah sama-sama bagian dalam hidup. Keduanya hanyalah sementara.",
-    "Ia yang mengerjakan lebih dari apa yang dibayar pada suatu saat akan dibayar lebih dari apa yang ia kerjakan.",
-    "Rahasia dari kesuksesan kita adalah bahwa kita tidak pernah menyerah.",
-    "Karena hidup adalah pilihan.",
-    "Memaafkan belum tentu membuat kita lebih baik atau bahkan merasa lebih baik tetapi yang jelas membuka jalan kebaikan.",
-    "Memaafkan belum tentu membuat kita lebih baik atau bahkan merasa lebih baik, tetapi yang jelas membuka jalan kebaikan.",
-    "Ujian kesetiaan selalu datang setiap hari, pastikan kamu setia kepada orang yang tepat.",
-    "Aku tak ingin membuatmu rindu padaku. Karena rindu itu artinya sedih. Dan aku tak ingin menjadi alasanmu bersedih.",
-    "Aku memilih memandangimu daripada segala lukisan yang ada di dunia.",
-    "Relasi itu seperti bunga yang membutuhkan air, bisa kering dan mati tanpa komunikasi.",
-    "Akan lebih baik bersabar menunggu seseorang datang menyapa daripada mengharapkan dia yang memilih pergi untuk kembali.",
-    "Mencintai itu butuh tenaga, jangan kau buang tenagamu untuk berlari dan menyerah.",
-    "Percayalah, jika dia memang cinta sejati kau, mau semenyakitkan apa pun, mau seberapa sulit liku yang harus dilalui, dia tetap akan bersama kau kelak, suatu saat nanti.",
-    "Cinta itu mempunyai kesanggupan yang hebat. Dia bisa membuat binatang menjadi manusia, dan manusia menjadi binatang.",
-    "Jauh sebelum aku bertemu denganmu, aku telah mengenalmu dalam doaku.",
-    "Cinta merupakan sesuatu yang indah, ia laksana sebuah lukisan di awan, cerah membingkai ufuk senja.",
-    "Semoga kelak selimutku adalah kamu yang senantiasa menghangatkanku di kala dingin menyerang tubuh dan jiwaku.",
-    "Aku menginginkanmu seutuhnya, selamanya, kamu dan aku, setiap hari.",
-    "Cinta itu burung yang indah, yang mengemis untuk ditangkap tapi menolak untuk dilukai.",
-    "Karena cinta, duri menjadi mawar. Karena cinta, cuka menjelma anggur segar.",
-    "Cinta tak berupa tatapan satu sama lain, tetapi memandang keluar bersama ke arah yang sama.",
-    "Cinta tidak terlihat dengan mata, tetapi dengan hati.",
-    "Kau pikir aku memperhatikanmu? Tidak, Sayang. Aku memperhatikan lingkunganmu, barangkali ada yang akan mengganggumu, kuhajar dia.",
-    "Cinta tidak pernah menuntut, cinta selalu memberi. Cinta selalu menderita, tanpa pernah meratap, tanpa pernah mendendam.",
-    "Cinta itu layaknya angin, aku tidak bisa melihatnya tetapi aku bisa merasakannya.",
-    "Cinta bukanlah bertahan seberapa lama. Tetapi seberapa jelas dan ke arah mana.",
-    "Sahabat yang baik tidak akan mencelakai, tetapi sahabat yang baik akan menasehati, melindungi, dan tulus mengasihi.",
-    "Hal terindah dari persahabatan adalah memahami dan dipahami, tanpa pernah memaksa dan ingin menang sendiri.",
-    "Jika kau mendapat sahabat sejati yang tak luntur baik dalam keadaan suka ataupun duka. Berjanjilah dalam hatimu untuk selalu setia padanya.",
-    "Persahabatan tidak perlu saling mengerti. Karena sahabat akan saling menerima hal yang tak bisa dimengerti.",
-    "Sahabat bukan mereka yang menghampirimu ketika butuh, namun mereka yang tetap bersamamu ketika seluruh dunia menjauh.",
-    "Persahabatan sejati itu layaknya kesehatan, nilainya baru kita sadari setelah kita kehilangannya.",
-    "Lebih baik ku menemani sahabat di kala sendiri daripada menemani kekasih yang tak mempunyai waktu untukku di kala ku sendiri dalam sepi.",
-    "Bersahabat bukan berarti kita mempercayainya, tapi bersahabat bagaimana kita dapat dipercaya olehnya. Kepercayaan itu penting.",
-    "Sahabat adalah orang yang akan membangunkan kita dari tidur walaupun sedang bermimpi indah.",
-    "Ketika dalam kesulitan, mereka menghilang, ketika dalam kebahagiaan, mereka datang dengan riang. Tidak, mereka bukan teman!",
-    "Setiap orang berbeda, unik dengan caranya. Kamu harus menghargainya, tapi tak berarti kamu harus menyukai semuanya.",
-    "Sahabat itu seperti halnya mata dan tangan. Saat mata menangis tangan mengusap, saat tangan terluka mata menangis.",
-    "Persahabatan yang didasari oleh keikhlasan hati dan kasih sayang, akan melahirkan keabadian dalam kebersamaan.",
-    "Jika kau mendapat sahabat sejati yang tak luntur baik dalam keadaan suka ataupun duka. Berjanjilah dalam hatimu untuk selalu setia padanya.",
-    "Bila esok tiba aku ingin seperti hari-hari sebelumnya. Hari-hari bersama sahabat dan teman-teman untuk bisa bersama melakukan hal-hal positif yang menyenangkan.",
-    "Apabila engkau menginginkan kemuliaan maka carilah sahabat dari orang orang yang takut kepada Allah subhanahu wataa'la.",
-    "Bisa jadi semua teman kita pergi, tapi tidak dengan sahabat",
-    "Persahabatan itu motivasi dan inspirasi, bukan hanya gengsi dan basa-basi.",
-    "Tak ada yang terasa semengerikan dulu saat kau sudah punya teman sejati.",
-    "Persahabatan tak terjalin dengan orang yang istimewa. Kita jadi istimewa karena bersahabat. Sahabatlah yang mengistimewakan kita."]
+ // https://jalantikus.com/tips/kata-kata-bucin/
+ global.quotes = [
+     "Everything has an end, that which is over let it pass and rest assured that everything will be fine",
+     "Every second is precious because time knows many things, including the secrets of the heart.",
+     "If you can't find the book you're looking for on the shelf, write it yourself."
+     "If your heart feels a lot of pain, then learn from that pain not to give pain to others.",
+     "Life is not always about boyfriends.",
+     "Home is not just a place, it is a feeling.",
+     "Which one do you choose: The person who dreams of success or the person who makes it come true?",
+     "You may not be able to water a flower that has withered and hope it will bloom again, but you can plant a new flower with a better hope than before.",
+     "It is not happiness that makes us grateful, but it is with gratitude that will make our lives happy.",
+     "I am silent. But I am not blind.",
+     "Faith is a knowledge of the heart, far beyond the reach of evidence.",
+     "The feeling of happiness and unhappiness does not come from what you have, nor does it come from who you are, or what you do. Happiness and unhappiness come from your thoughts.",
+     "Pain in the struggle is only temporary. You can feel it in a minute, an hour, a day, or a year. But if you give up, the pain will last forever.",
+     "Only someone who is afraid can act bravely. Without that fear there is nothing that can be called brave.",
+     "Be yourself. Who else can do it better than yourself?",
+     "Your chances of success in every condition can always be measured by how much you believe in yourself.",
+     "Our greatest glory is not in never failing, but in getting back up every time we fall."
+     "The most unfinished job is the one that never started."
+     "Your mind is like a fire that needs to be lit, not a vessel waiting to be filled."
+     "Honesty is the cornerstone of all success. Recognition is the strongest motivation. Even criticism can build confidence when it's "inserted" between compliments.",
+     "You only live once and that opportunity also comes once, both don't come twice."
+     "Because struggle is a sign of your journey to success.",
+     "The world is no longer the same, it's not always on our side, when we want to try that's where happiness will be beautiful in time.",
+     "Life is not as easy as turning the palm of the hand, but with the palm of our hand we can change our lives for the better."
+     "Be a person who challenges the future, not a coward who is safe in the comfort zone.",
+     "Learn to be humble, humble your heart as low as possible so that no one can lower you.",
+     "Faith is a knowledge of the heart, far beyond the reach of evidence.",
+     "Pain in the struggle is only temporary. You can feel it in a minute, an hour, a day, or a year. But if you give up, the pain will last forever.",
+     "Strength and development come only from continuous effort and struggle.",
+     "Entrepreneurs are not smart people but they are smart to find smart people.",
+     "Life is short. You have to be able to smile when you feel pain or we will never move on.",
+     "What is cool is not young people who have a lot of style, but young people who do a lot of work.",
+     "Only someone who is afraid can act bravely. Without that fear there is nothing that can be called brave.",
+     "Anyone who tries to bring you down is already under you.",
+     "Success and failure are both part of life. Both are temporary.",
+     "He who does more than what he is paid for will one day be paid more than what he does.",
+     "The secret of our success is that we never give up.",
+     "Because life is a choice."
+     "Forgiveness does not necessarily make us better or even feel better but it certainly opens the way for goodness.",
+     "Forgiveness doesn't necessarily make us better or even feel better, but it certainly opens the way for goodness.",
+     "The test of loyalty always comes every day, make sure you are loyal to the right person.",
+     "I don't want to make you miss me. Because longing means sad. And I don't want to be the reason you are sad.",
+     "I'd rather look at you than all the paintings in the world."
+     "Relationships are like flowers that need water, they can dry up and die without communication.",
+     "It is better to be patient waiting for someone to come say hello than to expect him who chose to leave to come back.",
+     "Loving takes energy, don't waste your energy to run and give up.",
+     "Believe me, if he really loves you, no matter how painful it is, no matter how difficult the twists and turns you have to go through, he will still be with you someday, someday.",
+     "Love has a great ability. He can make animals into humans, and humans into animals.",
+     "Long before I met you, I had known you in my prayers.",
+     "Love is a beautiful thing, it is like a painting in the clouds, brightly framing the horizon of twilight.",
+     "Hopefully one day my blanket will be you who always warms me when the cold attacks my body and soul.",
+     "I want you completely, forever, you and me, every day.",
+     "Love is a beautiful bird, which begs to be caught but refuses to be hurt."
+     "Because of love, thorns become roses. Because of love, vinegar becomes fresh wine.",
+     "Love is not looking at each other, but looking out together in the same direction."
+     "Love is not seen with the eyes, but with the heart.",
+     "You think I'm watching you? No, honey. I'm watching your surroundings, maybe someone will bother you, I beat him.",
+     "Love never demands, love always gives. Love always suffers, without ever lamenting, without ever holding grudges.",
+     "Love is like the wind, I can't see it but I can feel it."
+     "Love is not how long it lasts. But how clear and in which direction.",
+     "A good friend will not harm, but a good friend will advise, protect, and sincerely love.",
+     "The most beautiful thing about friendship is understanding and being understood, without ever pushing and wanting to win alone.",
+     "If you get a true friend who does not fade either in joy or sorrow. Promise in your heart to always be loyal to him.",
+     "Friendship does not need to understand each other. Because friends will accept each other what is incomprehensible.",
+     "Friends are not those who come to you when you need them, but those who stay with you when the whole world is away."
+     "True friendship is like health, we only realize its value after we lose it.",
+     "It's better for me to accompany a friend when I'm alone than to accompany a lover who doesn't have time for me when I'm alone in silence."
+     "Friendship does not mean we trust him, but friendly how we can be trusted by him. Trust is important.",
+     "Friends are people who will wake us from sleep even though we are dreaming.",
+     "When in trouble they disappear, when in happiness they come cheerfully. No, they are not friends!",
+     "Everyone is different, unique in their own way. You have to respect them, but that doesn't mean you have to like them all.",
+     "Friends are like eyes and hands. When the eyes cry the hands wipe, when the hands are injured the eyes cry.",
+     "Friendship based on sincerity and love will give birth to eternity in togetherness."
+     "If you get a true friend who does not fade either in joy or sorrow. Promise in your heart to always be loyal to him.",
+     "When tomorrow comes I want to be like the previous days. Days with friends and friends to be able to do positive positive things together.",
+     "If you want glory then look for friends from people who fear Allah subhanahu wataa'la.",
+     "It could be that all our friends go, but not with friends",
+     "Friendship is motivation and inspiration, not just prestige and pleasantries.",
+     "Nothing feels as terrible as it used to be when you already have a true friend.",
+     "Friendship does not exist with special people. We are special because we are friends. It is friends who make us special."]
