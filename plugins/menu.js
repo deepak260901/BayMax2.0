@@ -42,9 +42,9 @@ const defaultMenu = {
 ╚════════════════❀
 %readmore`.trimStart(),
   header: '╔══「 %category 」══❀',
-  body: '  ║☆ %cmd %islimit %isPremium',
+  body: '  ║☆ hello',
   footer: '╚════════════❀\n',
-  after: ` Hello
+  after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
 `,
