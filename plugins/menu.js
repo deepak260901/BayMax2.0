@@ -37,17 +37,18 @@ Nᴏᴛᴇ: If You Have any Issues with Bot Then Contact Owner.
 
 Bᴏᴛ Nᴀᴍᴇ:- %me
 Mʏ ᴘʀᴇғɪx:- /
-
-Here📜 is my Command List.....
-╔════════════════❀
-╚════════════════❀
+════════════════
+💠Limit: %limit 
+🏮Level: %level
+🎐Total Xp %totalexp 
+🧣Role: %role
+🔮Uptime: %uptime (%muptime)
+════════════════
 %readmore`.trimStart(),
-  header: '╔━❰ %category ❱━══',
+  header: '╔═━❰ %category ❱━══',
   body: '  ║☆ %cmd %islimit %isPremium
-  footer: '╚════════════❀\n',
+  footer: '╚════════════\n',
   after: `
-*%npmname@^%version*
-${'```%npmdesc```'}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
