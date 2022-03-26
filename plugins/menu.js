@@ -21,7 +21,6 @@ let tags = {
   'database': 'Database',
   'vote': 'Voting',
   'absen': 'Absen',
-  'quran': 'Al Qur\'an',
   'jadibot': 'Jadi Bot',
   'owner': 'Owner',
   'host': 'Host',
@@ -31,24 +30,20 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-(❤️️ω❤️)Konnichiwa %name ᴅᴀʀʟɪɴɢ👋🏻 ɪ ᴀᴍ %me!,
+(❤️️ω❤️)Konnichiwa %name Darling👋🏻 I am %me!,
 
-Nᴏᴛᴇ📝: If You Have any Issues with Bot Then Contact Owner
+Nᴏᴛᴇ📝: If You Have any Issues with thehe Bot or any error Then Contact Owner or Type /report to report Owner:)
 
-Type: /owner To Contact My Darling
 Bᴏᴛ Nᴀᴍᴇ:- %me
 Mʏ ᴘʀᴇғɪx:- /
 ════════════════
-💠Limit: %limit 
-🏮Level: %level
-🎐Total Xp %totalexp 
-🧣Role: %role
 🔮Uptime: %uptime (%muptime)
+💠Total Features:- 244!
 ════════════════
 %readmore`.trimStart(),
-  header: '══━❰ %category ❱━══',
+  header: '❀══━❰ %category ❱━══❀',
   body: '〽️ %cmd %islimit %isPremium',
-  footer: '════════════\n',
+  footer: '❀════════════❀\n',
   after: `
 `,
 }
