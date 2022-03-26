@@ -42,7 +42,12 @@ const defaultMenu = {
 ╚════════════════❀
 %readmore`.trimStart(),
   header: '╔══「 %category 」══❀',
-  body: '  ║☆ hello',
+  body: '  ║☆ ╭─「 Main 」
+              〽️ .afk [alasan]
+              〽️ .jadian (Limit)
+              〽️ .menu
+              〽️ .help
+              〽️ .?',
   footer: '╚════════════❀\n',
   after: `
 *%npmname@^%version*
