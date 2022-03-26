@@ -8,7 +8,7 @@ let handler = async (m, { conn, text }) => {
     let win = Math.ceil(money * 2)
     if (money < 10) throw 'Minimal 10'
     let users = global.DATABASE._data.users
-    if (money > users[m.sender].money) throw 'Uang Anda Tidak Cukup'
+    if (money > users[m.sender].money) throw 'Your Money Is Not Enough'
     let emojis = ["🍏","🍎","🍊","🍋","🍑","🪙","🍅","🍐","🍒","🥥","🍌"];
     let a = Math.floor(Math.random() * emojis.length);
     let b = Math.floor(Math.random() * emojis.length);
