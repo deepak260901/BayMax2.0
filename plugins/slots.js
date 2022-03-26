@@ -1,8 +1,8 @@
 let { MessageType } = require('@adiwajshing/baileys')
 let num = /([0-9])$/i
 let handler = async (m, { conn, text }) => {
-    if (!text) throw 'Masukkan Jumlah Uang Yang Ingin Anda Slot'
-    if (!num.test(text)) throw 'Hanya Angka'
+    if (!text) throw 'Enter The Amount Of Money You Want To Slot'
+    if (!num.test(text)) throw 'Only Numbers'
     let money = text * 1
     let jackpot = Math.ceil(money * 5)
     let win = Math.ceil(money * 2)
