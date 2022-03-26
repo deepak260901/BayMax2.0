@@ -47,7 +47,7 @@ Mʏ ᴘʀᴇғɪx:- /
 %readmore`.trimStart(),
   header: '╔═━❰ %category ❱━══',
   body: '  ║☆ %cmd %islimit %isPremium
-  footer: '┗━━━━━━━━━━━━━━━━❀ ',
+  footer: '┗━━━━━━━━━━━━━━━━❀',
   after: `
 `,
 }
