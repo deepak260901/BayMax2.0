@@ -33,6 +33,12 @@ const defaultMenu = {
 
 (❤️ω❤️)Kᴏɴɴɪᴄʜɪᴡᴀ %name ᴅᴀʀʟɪɴɢ👋🏻 ɪ ᴀᴍ %me!,
 
+Nᴏᴛᴇ: If You Have any Issues with Bot Then Contact Owner.
+
+Bᴏᴛ Nᴀᴍᴇ:- %me
+Mʏ ᴘʀᴇғɪx:- /
+
+Here📜 is my Command List.....
 ╔════════════════❀
 ╚════════════════❀
 %readmore`.trimStart(),
