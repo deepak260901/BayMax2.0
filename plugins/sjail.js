@@ -7,8 +7,8 @@ let handler = async (m, { conn, text }) => {
  try {
   let q = m.quoted ? m.quoted : m
   let mime = (q.msg || q).mimetype || ''
-  if (!mime) throw 'Tidak ada foto'
-  if (!/image\/(jpe?g|png)/.test(mime)) throw `Mime ${mime} tidak support`
+  if (!mime) throw 'No picture'
+  if (!/image\/(jpe?g|png)/.test(mime)) throw `Mime ${mime} not supported`
   let img = await q.download()
   let url = await uploadImage(img)
   let wanted = global.API('dzx', '/api/canvas/wanted', { url }) //`https://api.dhamzxploit.my.id/api/canvas/wanted?url=${url}`
