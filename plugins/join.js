@@ -7,17 +7,17 @@ let handler = async (m, { conn, text, isMods, isOwner }) => {
     if (!code) throw 'Link invalid'
     if (isMods || isOwner || m.fromMe) {
         let res = await conn.acceptInvite(code)
-        m.reply(`Berhasil join grup ${res.gid}`)
+        m.reply(`Successfully joined the group ${res.gid}`)
     } else {
     
         let name = conn.getName(m.sender)
         conn.req[m.sender] = {
             name,
-            text: 'Kak join group ku donk, ini linknya \n```https://chat.whatsapp.com/' + code + '```',
+            text: 'join my group please, here is the link \n```https://chat.whatsapp.com/' + code + '```',
             date: new Date * 1
         }
-        for (let jid of Object.entries(global.Owner).filter(v => v[1].isReport).map(v => v[0].replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid)) m.reply('*dari:* ' + m.sender.split('@')[0] + '\n*Link:* ' + link, jid)
-        m.reply('Sedang di process Owner')
+        for (let jid of Object.entries(global.Owner).filter(v => v[1].isReport).map(v => v[0].replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid)) m.reply('*from:* ' + m.sender.split('@')[0] + '\n*Link:* ' + link, jid)
+        m.reply('In process Owner')
     }
 }
 handler.help = ['join [chat.whatsapp.com]']
