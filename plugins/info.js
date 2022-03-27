@@ -10,12 +10,11 @@ let handler  = async (m, { conn, usedPrefix }) => {
   await m.reply('wait reading Info!!')
   let neww = Math.round(performance.now())
   conn.reply(m.chat, `
-❑ *Bot Name* BayMax (BOT)
-❑ *Version:* ${package.version}
+❑ *Bot Name* ZeroTwo
+❑ *Version:* 0.1.0
 ❑ *Wa Web version:* 10.0
 ❑ *Wa web Name:* SERVER TOSHIRO
-❑ *Browser:* Desktop
-❑ *Mode: ${global.opts}
+❑ Hey I'm ZeroTwo made with Language Javascript And Via Node.js by Toshiro
 ❑ *Total user:* ${totalreg} *user*
 ❑ *Uptime:* ${uptime}
 `.trim(), m)
