@@ -1,8 +1,9 @@
 let handler = async (m, { conn, text, participants }) => {
   let users = participants.map(u => u.jid)
-  m.reply(text + '\n' + users.map(v => '🧧@' + v.replace(/@.+/, '')).join`\n`, null, {
-    contextInfo: { mentionedJid: users }
-  })
+  let owner = '💠@' + m.chat.split`-`[0]
+  let admins = participants.filter(u=> u.isAdmin && !u.isSuperAdmin).map(v=> v.jid).map(w=> '🧣@' + w.replace(/@.+/,'')).join`\n`
+  let members = participants.filter(u=> !u.isAdmin && !u.isSuperAdmin).map(v=> v.jid).map(w=> '🧧@' + w.replace(/@.+/,'')).join`\n`
+  m.reply(text + '\n' + owner + '\n' + admins + '\n' + members)
 }
 handler.help = ['tagall']
 handler.tags = ['group']
