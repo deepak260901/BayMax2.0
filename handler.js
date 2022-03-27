@@ -268,7 +268,7 @@ module.exports = {
           let fail = plugin.fail || global.dfail // When failed
           let isAccept = plugin.command instanceof RegExp ? // RegExp Mode?
             plugin.command.test(command) :
-            Array.isArray(plugin.command) ? // Arrays?
+            Array.isArray(plugin.command) ? // Array?
               plugin.command.some(cmd => cmd instanceof RegExp ? // RegExp in Array?
                 cmd.test(command) :
                 cmd === command
@@ -284,12 +284,12 @@ module.exports = {
             let user = global.DATABASE._data.users[m.sender]
             if (!['unbanchat.js', 'link.js', 'pengumuman.js', 'creator.js'].includes(name) && chat && chat.isBanned && !isROwner) return // Except this
             if (!['unbanuser.js', 'inv.js', 'link.js', 'creator.js', 'profile.js'].includes(name) && user && user.banned && !isROwner) {
-              if (!opts['msgifbanned']) m.reply(`*YOU'RE BANNED* ${user.bannedReason ? `\nBecause *${user.bannedReason}*` : ''}
+              if (!opts['msgifbanned']) m.reply(`*ANDA TERBANNED* ${user.bannedReason ? `\nKarena *${user.bannedReason}*` : ''}
 
-Contact: 
+Hubungi: 
 ${global.owner.map((v, i) => '*Owner ' + (i + 1) + ':* wa.me/' + v).join('\n') + '\n\n' + global.mods.map((v, i) => '*Moderator ' + (i + 1) + ':* wa.me/' + v).join('\n')}
 
-I join the official group *${conn.getName(this.user.jid)}*: 
+Kuy join group Official *${conn.getName(this.user.jid)}*: 
 ${(global.linkGC).map((v, i) => '*Group ' + (i + 1) + '*\n' + v).join`\n\n`}
 `.trim())
               return
@@ -521,7 +521,7 @@ To turn off this feature, type
       
       await this.send(`${tag},${JSON.stringify(NodePayload)}`)
     }
-    await this.sendMessage(from, 'Sorry, Please don't call BOT!!', MessageType.extendedText)
+    await this.sendMessage(from, 'Sorry, please don't call BOT!!', MessageType.extendedText)
   }
 }
 
