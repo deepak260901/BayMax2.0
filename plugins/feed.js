@@ -16,43 +16,43 @@ let handler = async (m, { conn, args, usedPrefix }) => {
                     global.DATABASE._data.users[m.sender].anakrubah += 20
                     global.DATABASE._data.users[m.sender].rubahlastclaim = new Date * 1
                     conn.reply(m.chat, `Berhasil memberi makan pet ${type}`, m)
-                    if (rubah > 0) {
-                        let naiklvl = ((rubah * 100) - 1)
+                    if (change > 0) {
+                        let naiklvl = ((change * 100) - 1)
                         if (global.DATABASE._data.users[m.sender].anakrubah > naiklvl) {
                             global.DATABASE._data.users[m.sender].rubah += 1
                             global.DATABASE._data.users[m.sender].anakrubah -= (rubah * 100)
-                            conn.reply(m.chat, `*Selamat Pet Rubah kamu naik level*`, m)
+                            conn.reply(m.chat, `*Congratulations Pet Fox you leveled up*`, m)
                         }
                     }
                 } else m.reply(`Makanan pet kamu tidak cukup`)
-            } else m.reply(`Pet kamu sudah kenyang, coba kasih makan *${waktur}* lagi`)
+            } else m.reply(`Your pet is full, try feeding it*${waktur}* lagi`)
             break
         case 'kuda':
-            if (kuda == 0) return m.reply('*Kamu belum memiliki Pet Kuda*')
-            if (kuda == 5) return m.reply('*Pet kamu dah lvl max*')
+            if (kuda == 0) return m.reply('*You don't have a Horse Pet yet*')
+            if (kuda == 5) return m.reply('*Your pet is lvl max*')
             let __waktuk = (new Date - global.DATABASE._data.users[m.sender].kudalastclaim)
-            let _waktuk = (600000 - __waktuk)
-            let waktuk = clockString(_waktuk)
+            let _waktuk = (600000 - __time)
+            let waktuk = clockString(_time)
             if (new Date - global.DATABASE._data.users[m.sender].kudalastclaim > 600000) {
-                if (global.DATABASE._data.users[m.sender].makananpet > 0) {
-                    global.DATABASE._data.users[m.sender].makananpet -= 1
-                    global.DATABASE._data.users[m.sender].anakkuda += 20
-                    global.DATABASE._data.users[m.sender].kudalastclaim = new Date * 1
-                    conn.reply(m.chat, `Berhasil memberi makan pet ${type}`, m)
+                if (global.DATABASE._data.users[m.sender].pet food > 0) {
+                    global.DATABASE._data.users[m.sender].pet food -= 1
+                    global.DATABASE._data.users[m.sender].foal += 20
+                    global.DATABASE._data.users[m.sender].horselastclaim = new Date * 1
+                    conn.reply(m.chat, `Successfully feed the pet ${type}`, m)
                     if (kuda > 0) {
                         let naiklvl = ((kuda * 100) - 1)
                         if (global.DATABASE._data.users[m.sender].anakkuda > naiklvl) {
                             global.DATABASE._data.users[m.sender].kuda += 1
-                            global.DATABASE._data.users[m.sender].anakkuda -= (kuda * 100)
-                            conn.reply(m.chat, `*Selamat Pet Kuda kamu naik level*`, m)
+                            global.DATABASE._data.users[m.sender].foal -= (horse * 100)
+                            conn.reply(m.chat, `*Congratulations Pet Horse you leveled up*`, m)
                         }
                     }
-                } else m.reply(`Makanan pet kamu tidak cukup`)
-            } else m.reply(`Pet kamu sudah kenyang, coba kasih makan *${waktuk}* lagi`)
+                } else m.reply(`Your pet food is not enough`)
+            } else m.reply(`Your pet is full, try feeding it *${time}* again`)
             break
         case 'kucing':
-            if (kucing == 0) return m.reply('*Kamu belum memiliki Pet Kucing*')
-            if (kucing == 5) return m.reply('*Pet kamu dah lvl max*')
+            if (kucing == 0) return m.reply('*You don't have a Pet Cat yet*')
+            if (kucing == 5) return m.reply('*Your pet is lvl max*')
             let __waktu = (new Date - global.DATABASE._data.users[m.sender].kucinglastclaim)
             let _waktu = (600000 - __waktu)
             let waktu = clockString(_waktu)
