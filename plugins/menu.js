@@ -34,11 +34,16 @@ const defaultMenu = {
 
 Nᴏᴛᴇ📝: If You Have any Issues with Bot or any error Then Contact Owner or Type /report to report Owner:)
 
-Bᴏᴛ Nᴀᴍᴇ:- %me
-User Name:- %name
-Mʏ ᴘʀᴇғɪx:- Multi prefix
-Uptime: %uptime (%muptime)
-Total Features:- 244!
+Bot side info:- ZeroTwo made with Language Javascript And Via Node js By Toshiro Hitsugaya
+════════════════
+  💠Information💠
+════════════════
+Bᴏᴛ Nᴀᴍᴇ:- *%me*
+User Name:- *%name*
+Mʏ ᴘʀᴇғɪx:- *Multi prefix*
+Limit:- *%limit limit*
+Uptime: *%uptime (%muptime)*
+Total Features:- *244!*
 ════════════════
 Here📃 is my listed commands...
 %readmore`.trimStart(),
