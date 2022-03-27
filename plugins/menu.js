@@ -36,7 +36,7 @@ Nᴏᴛᴇ📝: If You Have any Issues with Bot or any error Then Contact Owner 
 
 Bᴏᴛ Nᴀᴍᴇ:- %me
 User Name:- %name
-Mʏ ᴘʀᴇғɪx:- 
+Mʏ ᴘʀᴇғɪx:- Multi prefix
 Uptime: %uptime (%muptime)
 Total Features:- 244!
 ════════════════
