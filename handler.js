@@ -113,28 +113,28 @@ module.exports = {
             legendary: 0,
             pet: 0,
             potion: 0,
-            sampah: 0,
+            rubbish: 0,
             armor: 0,
-            kucing: 0,
-            kucinglastclaim: 0,
+            cat: 0,
+            catlastclaim: 0,
             kuda: 0,
-            kudalastclaim: 0,
-            rubah: 0,
-            rubahlastclaim: 0,
-            anjing: 0,
-            anjinglastclaim: 0,
+            horselastclaim: 0,
+            fox: 0,
+            foxlastclaim: 0,
+            dog: 0,
+            doglastclaim: 0,
             Banneduser: false,
             BannedReason: '',
             warn: 0,
             afk: -1,
             afkReason: '',
             anakkucing: 0,
-            anakkuda: 0,
-            anakrubah: 0,
-            anakanjing: 0,
-            makananpet: 0,
+            foal: 0,
+            fox: 0,
+            puppy: 0,
+            pet food: 0,
             antispam: 0,
-            antispamlastclaim: 0,
+            anti spam last claim: 0,
             kayu: 0,
             batu: 0,
             string: 0,
@@ -268,7 +268,7 @@ module.exports = {
           let fail = plugin.fail || global.dfail // When failed
           let isAccept = plugin.command instanceof RegExp ? // RegExp Mode?
             plugin.command.test(command) :
-            Array.isArray(plugin.command) ? // Array?
+            Array.isArray(plugin.command) ? // Arrays?
               plugin.command.some(cmd => cmd instanceof RegExp ? // RegExp in Array?
                 cmd.test(command) :
                 cmd === command
@@ -284,12 +284,12 @@ module.exports = {
             let user = global.DATABASE._data.users[m.sender]
             if (!['unbanchat.js', 'link.js', 'pengumuman.js', 'creator.js'].includes(name) && chat && chat.isBanned && !isROwner) return // Except this
             if (!['unbanuser.js', 'inv.js', 'link.js', 'creator.js', 'profile.js'].includes(name) && user && user.banned && !isROwner) {
-              if (!opts['msgifbanned']) m.reply(`*ANDA TERBANNED* ${user.bannedReason ? `\nKarena *${user.bannedReason}*` : ''}
+              if (!opts['msgifbanned']) m.reply(`*YOU'RE BANNED* ${user.bannedReason ? `\nBecause *${user.bannedReason}*` : ''}
 
-Hubungi: 
+Contact: 
 ${global.owner.map((v, i) => '*Owner ' + (i + 1) + ':* wa.me/' + v).join('\n') + '\n\n' + global.mods.map((v, i) => '*Moderator ' + (i + 1) + ':* wa.me/' + v).join('\n')}
 
-Kuy join group Official *${conn.getName(this.user.jid)}*: 
+I join the official group *${conn.getName(this.user.jid)}*: 
 ${(global.linkGC).map((v, i) => '*Group ' + (i + 1) + '*\n' + v).join`\n\n`}
 `.trim())
               return
@@ -481,9 +481,9 @@ ${(global.linkGC).map((v, i) => '*Group ' + (i + 1) + '*\n' + v).join`\n\n`}
     let chat = global.DATABASE._data.chats[m.key.remoteJid]
     if (chat.delete) return
     await this.reply(m.key.remoteJid, `
-Terdeteksi @${m.participant.split`@`[0]} telah menghapus pesan
+Detected @${m.participant.split`@`[0]} deleted message
 
-Untuk mematikan fitur ini, ketik
+To turn off this feature, type
 *.enable delete*
 `.trim(), m.message, {
       contextInfo: {
@@ -521,7 +521,7 @@ Untuk mematikan fitur ini, ketik
       
       await this.send(`${tag},${JSON.stringify(NodePayload)}`)
     }
-    await this.sendMessage(from, 'Maaf, Tolong jangan telfon BOT!!', MessageType.extendedText)
+    await this.sendMessage(from, 'Sorry, Please don't call BOT!!', MessageType.extendedText)
   }
 }
 
