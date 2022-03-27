@@ -481,9 +481,9 @@ ${(global.linkGC).map((v, i) => '*Group ' + (i + 1) + '*\n' + v).join`\n\n`}
     let chat = global.DATABASE._data.chats[m.key.remoteJid]
     if (chat.delete) return
     await this.reply(m.key.remoteJid, `
-Terdeteksi @${m.participant.split`@`[0]} telah menghapus pesan
+Detected @${m.participant.split`@`[0]} deleted message
 
-Untuk mematikan fitur ini, ketik
+To turn off this feature, Type
 *.enable delete*
 `.trim(), m.message, {
       contextInfo: {
