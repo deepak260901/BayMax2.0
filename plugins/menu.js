@@ -2,49 +2,50 @@ let fs = require('fs')
 let path = require('path')
 let levelling = require('../lib/levelling')
 let tags = {
-  'main': '🏮Main🏮',
-  'rpg': '🎮Epic RPG🎮',
-  'game': '💠Game💠',
-  'xp': '🔮Exp & Limit🔮',
-  'sticker': '🔰Sticker🔰',
-  'kerang': '🧣Kerang Ajaib🧣',
-  'quotes': '📝Quotes📝',
-  'admin': '🎐Admin🎐',
-  'group': '🛡️Group🛡️',
-  'premium': '🧧Premium🧧',
-  'internet': '🌐Internet🌐',
-  'anonymous': '💬Anonymous Chat💬',
-  'nulis': '©️MagerNulis & Logo©️',
-  'downloader': '⏬Downloader⏬',
-  'tools': '🛠️Tools🛠️',
-  'fun': '🎗️Fun🎗️',
-  'database': '🔱Database🔱',
-  'vote': '🗳️Voting🗳️',
-  'absen': '🔻Absen🔻',
-  'jadibot': '🧨Jadi Bot🧨',
-  'owner': '🎉Owner🎉',
-  'host': '🎆Host🎆',
-  'advanced': '🏅Advanced🏅',
-  'info': '👾Info👾',
+  'main': 'Main',
+  'rpg': 'Epic RPG',
+  'game': 'Game',
+  'xp': 'Exp & Limit',
+  'sticker': 'Sticker',
+  'kerang': 'Kerang Ajaib',
+  'quotes': 'Quotes',
+  'admin': 'Admin',
+  'group': 'Group',
+  'premium': 'Premium',
+  'internet': 'Internet',
+  'anonymous': 'Anonymous Chat',
+  'nulis': 'MagerNulis & Logo',
+  'downloader': 'Downloader',
+  'tools': 'Tools',
+  'fun': 'Fun',
+  'database': 'Database',
+  'vote': 'Voting',
+  'absen': 'Absen',
+  'jadibot': 'Jadi Bot',
+  'owner': 'Owner',
+  'host': 'Host',
+  'advanced': 'Advanced',
+  'info': 'Info',
   '': 'No Category',
 }
 const defaultMenu = {
   before: `
 (❤️️ω❤️)Konnichiwa %name Darling👋🏻 I am %me!,
 
-Nᴏᴛᴇ📝: If You Have any Issues with thehe Bot or any error Then Contact Owner or Type /report to report Owner:)
+Nᴏᴛᴇ📝: If You Have any Issues with Bot or any error Then Contact Owner or Type /report to report Owner:)
 
 Bᴏᴛ Nᴀᴍᴇ:- %me
-Mʏ ᴘʀᴇғɪx:- /
+User Name:- %name
+Mʏ ᴘʀᴇғɪx:- 
+Uptime: %uptime (%muptime)
+Total Features:- 244!
 ════════════════
-🔮Uptime: %uptime (%muptime)
-💠Total Features:- 244!
-════════════════
+Here📃 is my listed commands...
 %readmore`.trimStart(),
-  header: '❀══━❰ %category ❱━══❀',
+  header: '㋛︎══━❰ %category ❱━══㋛︎',
   body: '〽️ %cmd %islimit %isPremium',
-  footer: '❀════════════❀\n',
-  after: `ゼロツー❤️
+  footer: '㋛︎════════════㋛︎\n',
+  after: `ゼロツー(❤️️ω❤️)
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
