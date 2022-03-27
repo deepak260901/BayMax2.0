@@ -20,6 +20,7 @@ let tags = {
   'fun': 'Fun',
   'database': 'Database',
   'vote': 'Voting',
+  'nsfw': 'Nsfw',
   'absen': 'Absen',
   'jadibot': 'Jadi Bot',
   'owner': 'Owner',
