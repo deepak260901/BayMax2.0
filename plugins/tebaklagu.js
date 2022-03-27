@@ -6,7 +6,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     conn.tebaklagu = conn.tebaklagu ? conn.tebaklagu : {}
     let id = m.chat
     if (id in conn.tebaklagu) {
-        conn.reply(m.chat, 'Masih ada soal belum terjawab di chat ini', conn.tebaklagu[id][0])
+        conn.reply(m.chat, 'There are still unanswered questions in this chat', conn.tebaklagu[id][0])
         throw false
     }
     // ubah isi 'id' kalo mau ganti playlist spotifynya
@@ -17,12 +17,12 @@ let handler = async (m, { conn, usedPrefix }) => {
     let json = result.result
     // if (!json.status) throw json
     let caption = `
-TEBAK JUDUL LAGU
-Timeout *${(timeout / 1000).toFixed(2)} detik*
-Ketik *${usedPrefix}cek* untuk bantuan
+GUESS THE SONG TITLE
+Timeout *${(timeout / 1000).toFixed(2)} second*
+Type *${usedPrefix}check* for help
 Bonus: ${poin} XP
-*Balas pesan ini untuk menjawab!*`.trim()
-    conn.tebaklagu[id] = [
+*Reply to this message to answer!*`.trim()
+    conn.guess the song[id] = [
         await m.reply(caption),
         json, poin,
         setTimeout(() => {
@@ -32,7 +32,7 @@ Bonus: ${poin} XP
     ]
     await conn.sendFile(m.chat, json.preview, 'coba-lagi.mp3', '', m)
 }
-handler.help = ['tebaklagu']
+handler.help = ['guess the song']
 handler.tags = ['game']
 handler.command = /^tebaklagu$/i
 handler.limit = true
