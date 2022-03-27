@@ -41,7 +41,6 @@ Bot side info:- ZeroTwo made with Language Javascript And Via Node js By Toshiro
 Bᴏᴛ Nᴀᴍᴇ:- *%me*
 User Name:- *%name*
 Mʏ ᴘʀᴇғɪx:- *Multi prefix*
-Limit:- *%limit limit*
 Uptime: *%uptime (%muptime)*
 Total Features:- *244!*
 ════════════════
