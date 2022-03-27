@@ -9,13 +9,13 @@ const akaneko = require(`akaneko`);
 module.exports = {
   name: `ass`,
   commandType: "Nsfw🔞",
-  description: `ɪ ᴋɴᴏᴡ ʏᴏᴜ ʟɪᴋᴇ ᴀɴɪᴍᴇ ᴀꜱꜱ~`,
+  description: `ɪ ᴋɴᴏᴡ ʏᴏᴜ ʟɪᴋᴇ ᴀɴɪᴍᴇ ᴀꜱꜱ darling 💕~`,
   async handle(υℓтяσηℓιєηт, chat, ᴜʟᴛʀᴏɴ, Arc) {
-    if (ᴜʟᴛʀᴏɴ.isGroup && !ᴜʟᴛʀᴏɴ.isBotGroupAdmin) {
+    if (ᴜʟᴛʀᴏɴ.isGroup && !Zerotwo.isBotGroupAdmin) {
       // Group But Non-Admin
-      return await υℓтяσηℓιєηт
+      return await Zerotwo
         .sendMessage(
-          ᴜʟᴛʀᴏɴ.logGroup,
+          Zerotwo.logGroup,
           {
             url: `https://i.postimg.cc/yxsh4dMV/error.png`,
           },
