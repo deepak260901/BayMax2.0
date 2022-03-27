@@ -34,7 +34,7 @@ const defaultMenu = {
 
 Nᴏᴛᴇ📝: If You Have any Issues with Bot or any error Then Contact Owner or Type /report to report Owner:)
 
-Bot side info:- ZeroTwo made with Language Javascript And Via Node js By Toshiro Hitsugaya
+ʙᴏᴛ sɪᴅᴇ ɪɴғᴏ:- ZeroTwo made with Language Javascript And Via Node js By Toshiro Hitsugaya!
 ════════════════
   💠Information💠
 ════════════════
