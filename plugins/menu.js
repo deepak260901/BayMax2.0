@@ -77,9 +77,7 @@ Nᴏᴛᴇ📝: If You Have any Issues with Bot or any error Then Contact Owner 
 
 Author:- Toshiro Hitsugaya
 Bot Side:- Build whit Javascript and Via Nodejs!
-     ┏━━━━━━━━━━━━━━┓
        [ SHORT RULES ]
-     ┗━━━━━━━━━━━━━━┛
 No.1 Don't call Bot Avoid Blocking.
 No.2 Don't spam in Bot Dm or Owner Dm.
 No.3 If Bot is Not responding wait 2min.
@@ -89,12 +87,13 @@ Have A Great day 💫✌🏻.
 ═════════════════
   💠Information💠
 ═════════════════
-Bot Name : ${conn.user.name}
-Groups Chats : ${conn.chats.array.filter(v => v.jid.endsWith('g.us')).map(v => v.jid).length}
-Personal Chats : ${conn.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net')).map(v => v.jid).length} 
-Uptime Bot : ${clockString(process.uptime() * 1000)}
-Host Number : @${global.conn.user.jid.split('@')[0]}
-═════════════════ %readmore`.trimStart()
+🧧Bot Name : ${conn.user.name}
+🌐Groups Chats : ${conn.chats.array.filter(v => v.jid.endsWith('g.us')).map(v => v.jid).length}
+💬Personal Chats : ${conn.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net')).map(v => v.jid).length} 
+👾Uptime Bot : ${clockString(process.uptime() * 1000)}
+🎗️Host Number : @${global.conn.user.jid.split('@')[0]}
+═════════════════
+Here📃 is My usable Commands %readmore`.trimStart()
 let header = conn.menu.header || '═══━❰ %category ❱━══'
     let body   = conn.menu.body   || ' 〽️ %cmd%islimit'
     let footer = conn.menu.footer || '═════════════════\n'
