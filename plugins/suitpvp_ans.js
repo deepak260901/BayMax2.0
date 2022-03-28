@@ -8,7 +8,7 @@ handler.before = async function (m) {
     let tie = false
     if (m.sender == room.p2 && /^(acc(ept)?|terima|gas|oke?|tolak|gamau|nanti|ga(k.)?bisa)/i.test(m.text) && m.isGroup && room.status == 'wait') {
       if (/^(tolak|gamau|nanti|ga(k.)?bisa)/i.test(m.text)) {
-        this.reply(m.chat, `@${room.p2.split`@`[0]} menolak suit, suit dibatalkan`, m, { contextInfo: { mentionedJid: [room.p2] } })
+        this.reply(m.chat, `@${room.p2.split`@`[0]} reject the suit, the suit is canceled`, m, { contextInfo: { mentionedJid: [room.p2] } })
         delete this.suit[room.id]
         return !0
       }
@@ -16,12 +16,12 @@ handler.before = async function (m) {
       room.asal = m.chat
       clearTimeout(room.waktu)
       //delete room[room.id].waktu
-      m.reply(`Suit telah dikirimkan ke chat
+      m.reply(`Suit has been sent to chat
 @${room.p.split`@`[0]} dan 
 @${room.p2.split`@`[0]}
 
-Silahkan pilih suit di chat masing"
-klik wa.me/${conn.user.jid.split`@`[0]}`, m.chat, {
+Please choose a suit in the respective chat"
+click wa.me/${conn.user.jid.split`@`[0]}`, m.chat, {
         contextInfo: {
           mentionedJid: [room.p, room.p2]
         }
@@ -50,19 +50,19 @@ klik wa.me/${conn.user.jid.split`@`[0]}`, m.chat, {
     if (jwb && reg.test(m.text) && !room.pilih && !m.isGroup) {
       room.pilih = reg.exec(m.text.toLowerCase())[0]
       room.text = m.text
-      m.reply(`Kamu telah memilih ${m.text} ${!room.pilih2 ? `\n\nMenunggu lawan memilih` : ''}`)
-      if (!room.pilih2) this.reply(room.p2, '_Lawan sudah memilih_\nSekarang giliran kamu', 0)
+      m.reply(`Kamu telah memilih ${m.text} ${!room.pilih2 ? `\n\nWaiting for the opponent to choose` : ''}`)
+      if (!room.pilih2) this.reply(room.p2, '_The opponent has chosen_\nNow it is your turn', 0)
     }
     if (jwb2 && reg.test(m.text) && !room.pilih2 && !m.isGroup) {
       room.pilih2 = reg.exec(m.text.toLowerCase())[0]
       room.text2 = m.text
-      m.reply(`Kamu telah memilih ${m.text} ${!room.pilih ? `\n\nMenunggu lawan memilih` : ''}`)
-      if (!room.pilih) this.reply(room.p, '_Lawan sudah memilih_\nSekarang giliran kamu', 0)
+      m.reply(`You have chosen ${m.text} ${!room.pilih ? `\n\nMenunggu lawan memilih` : ''}`)
+      if (!room.pilih) this.reply(room.p, '_The opponent has chosen_\nNow it is your turn', 0)
     }
     let stage = room.pilih
     let stage2 = room.pilih2
     if (room.pilih && room.pilih2) {
-      clearTimeout(room.waktu_milih)
+      clearTimeout(room.time_select)
       if (b.test(stage) && g.test(stage2)) win = room.p
       else if (b.test(stage) && k.test(stage2)) win = room.p2
       else if (g.test(stage) && k.test(stage2)) win = room.p
