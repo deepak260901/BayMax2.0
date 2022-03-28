@@ -71,22 +71,33 @@ let handler  = async (m, { conn, usedPrefix: _p, DevMode }) => {
     }
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || ` 
-╔═════════════════❀
-║🕵️‍♂️ Hey, %name!
-╚═════════════════❀
-╔═════════════════❀
-🤖 *Bot Name* : ${conn.user.name}
-💬 *Groups Chats* : ${conn.chats.array.filter(v => v.jid.endsWith('g.us')).map(v => v.jid).length}
-🌐 *Personal Chats* : ${conn.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net')).map(v => v.jid).length}
-🪀 *Wa Web Name* : ${conn.browserDescription[0]}
-🥏 *Wa Web Version* : ${conn.browserDescription[2]}
-🖥️ *Browser* : ${conn.browserDescription[1]}
-🧮 *Uptime Bot* : ${clockString(process.uptime() * 1000)}
-📲 *Host Number* : @${global.conn.user.jid.split('@')[0]}
-╚═════════════════❀ %readmore`.trimStart()
-let header = conn.menu.header || '╔═「 %category 」══❀'
-    let body   = conn.menu.body   || '║ ☆ %cmd%islimit'
-    let footer = conn.menu.footer || '╚═════════════════❀\n'
+(❤️ω❤️)Konnichiwa %name👋🏻 I'm ${conn.user.name}
+
+Nᴏᴛᴇ📝: If You Have any Issues with Bot or any error Then Contact Owner or Type /report to report Owner:)
+
+Author:- Toshiro Hitsugaya
+Bot Side:- Build whit Javascript and Via Nodejs!
+     ┏━━━━━━━━━━━━━━┓
+       [ SHORT RULES ]
+     ┗━━━━━━━━━━━━━━┛
+No.1 Don't call Bot Avoid Blocking.
+No.2 Don't spam in Bot Dm or Owner Dm.
+No.3 If Bot is Not responding wait 2min.
+
+    ಠ◡ಠ Hope you follow this worthless Rule;)
+Have A Great day 💫✌🏻.
+═════════════════
+  💠Information💠
+═════════════════
+Bot Name : ${conn.user.name}
+Groups Chats : ${conn.chats.array.filter(v => v.jid.endsWith('g.us')).map(v => v.jid).length}
+Personal Chats : ${conn.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net')).map(v => v.jid).length} 
+Uptime Bot : ${clockString(process.uptime() * 1000)}
+Host Number : @${global.conn.user.jid.split('@')[0]}
+═════════════════ %readmore`.trimStart()
+let header = conn.menu.header || '═══━❰ %category ❱━══'
+    let body   = conn.menu.body   || ' 〽️ %cmd%islimit'
+    let footer = conn.menu.footer || '═════════════════\n'
     let after  = conn.menu.after  || `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
     let _text  = before + '\n'
     for (let tag in groups) {
