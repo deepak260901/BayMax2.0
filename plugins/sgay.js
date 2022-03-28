@@ -8,11 +8,11 @@ let handler = async (m, { conn, text }) => {
   let q = m.quoted ? m.quoted : m
   let mime = (q.msg || q).mimetype || ''
   if (!mime) throw 'Tidak ada foto'
-  if (!/image\/(jpe?g|png)/.test(mime)) throw `Mime ${mime} tidak support`
+  if (!/image\/(jpe?g|png)/.test(mime)) throw `Mime ${mime} not support`
   let img = await q.download()
   let url = await uploadImage(img)
   let wanted = global.API('dzx', '/api/canvas/rainbow', { url }) //`https://api.dhamzxploit.my.id/api/canvas/rainbow?url=${url}`
-  let stiker = await sticker(null, wanted, 'Rainbow', '©games-wabot')
+  let stiker = await sticker(null, wanted, 'Rainbow', '©ZeroTwo 2022')
   conn.sendMessage(m.chat, stiker, MessageType.sticker, {
     quoted: m
   })
