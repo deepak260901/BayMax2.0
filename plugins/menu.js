@@ -7,8 +7,7 @@ let tags = {
   'game': 'Game',
   'xp': 'Exp & Limit',
   'sticker': 'Sticker',
-  'kerang': 'Kerang Ajaib',
-  'quotes': 'Quotes',
+  'shell': 'Magic Shell',
   'admin': 'Admin',
   'group': 'Group',
   'premium': 'Premium',
@@ -37,7 +36,9 @@ Nᴏᴛᴇ📝: If You Have any Issues with Bot or any error Then Contact Owner 
 
 Author:- Toshiro Hitsugaya
 Bot Side:- Build whit Javascript and Via Nodejs!
-
+     ┏━━━━━━━━━━━━━━┓
+       [ SHORT RULES ]
+     ┗━━━━━━━━━━━━━━┛
 No.1 Don't call Bot Avoid Blocking.
 No.2 Don't spam in Bot Dm or Owner Dm.
 No.3 If Bot is Not responding wait 2min.
@@ -51,13 +52,13 @@ Bᴏᴛ Nᴀᴍᴇ:- *%me*
 User Name:- *%name*
 Mʏ ᴘʀᴇғɪx:- *Multi prefix*
 Uptime: *%uptime (%muptime)*
-Total Features:- *${totalfeatures}_*
+Total Features:- *229*
 ════════════════
 Here📃 is my listed commands...
 %readmore`.trimStart(),
-  header: '㋛︎══━❰ %category ❱━══㋛︎',
+  header: '══━❰ %category ❱━══',
   body: '〽️ %cmd %islimit %isPremium',
-  footer: '㋛︎════════════㋛︎\n',
+  footer: '════════════\n',
   after: `ゼロツー(❤️️ω❤️)
 `,
 }
@@ -102,9 +103,6 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     let totalreg = Object.keys(global.DATABASE._data.users).length
     let rtotalreg = Object.values(global.DATABASE._data.users).filter(user => user.registered == true).length
     let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
-    let totalfeatures = Object.values(global.plugins).filter(
-    (v) => v.help && v.tags
-  ).length;
       return {
         help: Array.isArray(plugin.tags) ? plugin.help : [plugin.help],
         tags: Array.isArray(plugin.tags) ? plugin.tags : [plugin.tags],
