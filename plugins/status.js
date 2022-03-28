@@ -45,11 +45,11 @@ let handler  = async (m, { conn, usedPrefix, DevMode }) => {
             netsOut = NotDetect
         })
         await Promise.all([p1, p2, p3, p4])
-        await m.reply('Tunggu bentar') 
+        await m.reply('Wait a minute') 
         let _ramTotal = (ramTotal + ' MB')
         let neww = performance.now()
         conn.reply(m.chat, `
-  *Status Metro Bot*
+  *Status of Zero-Two*
 
 OS: *${OS}*
 CPU Model: *${cpuModel}*
