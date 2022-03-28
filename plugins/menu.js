@@ -25,33 +25,30 @@ let handler  = async (m, { conn, usedPrefix: _p, DevMode }) => {
     let totalreg = Object.keys(global.DATABASE._data.users).length
     let tags = {
       'main': 'Main',
-      'game' : 'Games',
-      'maker' : 'Maker',
-      'about': 'About And Info',
-      'rpg': 'Rpg',
-      'xp': 'Exp & Limit',
-      'premium': 'Premium',
-      'image' : 'Image',
-      'indonesian' : 'For Indonesians',
-      'game': 'Games',
-      'sticker': 'Sticker',
-      'spammer' : 'Spammer',
-      'audio': 'audio',
-      'database': 'Database',
-      'quotes': 'Quotes',
-      'internet': 'Internet',
-      'downloader': 'Downloader',
-      'tools': 'Tools',
-      'admin': 'Admin',
-	  'ep' : 'ep',
-	  'te' : 'te',
-      'group': 'Group',
-      'owner': 'Owner',
-      'host': 'Host',
-      'tools': 'tool',
-      'advanced': 'Advanced',
-      'info': 'Info',
-      '': 'No Category',
+  'rpg': 'Epic RPG',
+  'game': 'Game',
+  'xp': 'Exp & Limit',
+  'sticker': 'Sticker',
+  'shell': 'Magic Shell',
+  'admin': 'Admin',
+  'group': 'Group',
+  'premium': 'Premium',
+  'internet': 'Internet',
+  'anonymous': 'Anonymous Chat',
+  'nulis': 'MagerNulis & Logo',
+  'downloader': 'Downloader',
+  'tools': 'Tools',
+  'fun': 'Fun',
+  'database': 'Database',
+  'vote': 'Voting',
+  'nsfw': 'Nsfw',
+  'absen': 'Absen',
+  'jadibot': 'Jadi Bot',
+  'owner': 'Owner',
+  'host': 'Host',
+  'advanced': 'Advanced',
+  'info': 'Info',
+  '': 'No Category',
     }
     for (let plugin of Object.values(global.plugins))
       if (plugin && 'tags' in plugin)
@@ -77,7 +74,7 @@ let handler  = async (m, { conn, usedPrefix: _p, DevMode }) => {
 ╔═════════════════❀
 ║🕵️‍♂️ Hey, %name!
 ╚═════════════════❀
-
+╔═════════════════❀
 🤖 *Bot Name* : ${conn.user.name}
 💬 *Groups Chats* : ${conn.chats.array.filter(v => v.jid.endsWith('g.us')).map(v => v.jid).length}
 🌐 *Personal Chats* : ${conn.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net')).map(v => v.jid).length}
@@ -113,7 +110,7 @@ let header = conn.menu.header || '╔═「 %category 」══❀'
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).join`|`})`, 'g'), (_, name) => replace[name])
-    conn.sendFile(m.chat, fs.readFileSync(`./src/pew.mp4`), 'pew.mp4', text.trim(), m)
+    conn.sendFile(m.chat, fs.readFileSync(`./src/zero.mp4`), 'zero.mp4', text.trim(), m)
   } catch (e) {
     conn.reply(m.chat, 'Sorry Menu Error!!r', m)
     throw e
