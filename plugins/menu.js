@@ -102,6 +102,9 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     let totalreg = Object.keys(global.DATABASE._data.users).length
     let rtotalreg = Object.values(global.DATABASE._data.users).filter(user => user.registered == true).length
     let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
+    let totalfeatures = Object.values(global.plugins).filter(
+    (v) => v.help && v.tags
+  ).length;
       return {
         help: Array.isArray(plugin.tags) ? plugin.help : [plugin.help],
         tags: Array.isArray(plugin.tags) ? plugin.tags : [plugin.tags],
