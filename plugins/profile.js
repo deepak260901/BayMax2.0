@@ -7,9 +7,13 @@ let handler = async (m, { conn, usedPrefix }) => {
   } finally {
     let name = m.fromMe ? conn.user : conn.contacts[m.sender]
     let str = `
-Name: ${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])} (@${m.sender.replace(/@.+/, '')})
-Number: +${m.sender.split`@`[0]}
-Link: https://wa.me/${m.sender.split`@`[0]}
+┌──────────────────
+│  [ User Profile ]
+├─────────────────
+│➸ Name: ${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])} (@${m.sender.replace(/@.+/, '')})
+│➸ Number: +${m.sender.split`@`[0]}
+│➸ Link: https://wa.me/${m.sender.split`@`[0]}
+├─────────────────
 ${readMore}
 \n\n*Want to check the contents of your inventory?  Type ${usedPrefix}inv*
 `.trim()
