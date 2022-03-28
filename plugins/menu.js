@@ -51,7 +51,7 @@ Bᴏᴛ Nᴀᴍᴇ:- *%me*
 User Name:- *%name*
 Mʏ ᴘʀᴇғɪx:- *Multi prefix*
 Uptime: *%uptime (%muptime)*
-Total Features:- *244!*
+Total Features:- *${totalfeatures}_*
 ════════════════
 Here📃 is my listed commands...
 %readmore`.trimStart(),
