@@ -26,9 +26,9 @@ let handler = async (m, { usedPrefix, command }) => {
 
 ${fltr}
 
-Akses/ambil dengan mengetik:
+Access/fetch by typing:
 *${usedPrefix}get${which}* <nama>
-atau langsung ketik teksnya
+or directly type the text
 `.trim())
 }
 handler.help = ['vn', 'msg', 'video', 'gif', 'audio', 'img', 'sticker'].map(v => 'list' + v)
