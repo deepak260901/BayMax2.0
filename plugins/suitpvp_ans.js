@@ -71,10 +71,10 @@ click wa.me/${conn.user.jid.split`@`[0]}`, m.chat, {
       else if (k.test(stage) && g.test(stage2)) win = room.p2
       else if (stage == stage2) tie = true
       this.reply(room.asal, `
-_*Hasil Suit*_${tie ? '\nSERI' : ''}
+_*Suit Results*_${tie ? '\nSERIES' : ''}
 
-@${room.p.split`@`[0]} (${room.text}) ${tie ? '' : room.p == win ? ` Menang \n+${room.poin} money` : ` Kalah \n-${room.poin_lose} money`}
-@${room.p2.split`@`[0]} (${room.text2}) ${tie ? '' : room.p2 == win ? ` Menang \n+${room.poin} money` : ` Kalah \n-${room.poin_lose} money`}
+@${room.p.split`@`[0]} (${room.text}) ${tie ? '' : room.p == win ? ` Win \n+${room.poin} money` : ` Lost \n-${room.poin_lose} money`}
+@${room.p2.split`@`[0]} (${room.text2}) ${tie ? '' : room.p2 == win ? ` Win \n+${room.poin} money` : ` Lost \n-${room.poin_lose} money`}
 `.trim(), m, { contextInfo: { mentionedJid: [room.p, room.p2] } })
       if (!tie) {
         global.DATABASE._data.users[win == room.p ? room.p : room.p2].money += room.poin
