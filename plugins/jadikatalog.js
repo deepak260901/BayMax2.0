@@ -9,7 +9,7 @@ let handler  = async (m, { conn, text, usedPrefix }) => {
   let lmao = 'emror?'
   let [txt, ...text2] = text.replace(lmao, '').trimStart().split(split)
   if (!txt) throw 'Masukan Judul dan Deskripsi nya'
-  if (!text2) throw `Contoh : ${usedPrefix}jadikatalog SLAYER?|INI BUKAN SELAYER BANG:>`
+  if (!text2) throw `Example : ${usedPrefix}so the SLAYER catalog?|THIS IS NOT A SELAYER BANG:>`
   let q = m.quoted ? m.quoted : m 
   let mime = (q.msg || q).mimetype || ''
   if (/image|video/.test(mime)) {
@@ -26,14 +26,14 @@ let handler  = async (m, { conn, text, usedPrefix }) => {
 	    "description": `${text2}`, 
 	    "currencyCode": "IDR", 
             "priceAmount": "50000", 
-	    "retailerId": "games-wabot", 
+	    "retailerId": "ZeroTwo", 
 	    "productImageCount": 1 
 	  }, 
 	  "businessOwnerJid": conn.user.jid
 	}
       }, {})
     conn.relayWAMessage(pi, m)
-  } else m.reply('FOTO NYA MANA OM?')
+  } else m.reply('WHERE IS THE PHOTO?')
 }
 
 handler.help = ['jadikatalog']
