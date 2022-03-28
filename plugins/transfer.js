@@ -45,15 +45,15 @@ let handler = async (m, { conn, args, usedPrefix, DevMode }) => {
                     }
                 } else conn.reply(m.chat, `Your potions are not enough`.trim(), m)
                 break
-            case 'sampah':
+            case 'rubbish':
                 if (global.DATABASE._data.users[m.sender].sampah >= count * 1) {
                     try {
-                        global.DATABASE._data.users[m.sender].sampah -= count * 1
+                        global.DATABASE._data.users[m.sender].rubbish -= count * 1
                         global.DATABASE._data.users[who].sampah += count * 1
-                        conn.reply(m.chat, `Berhasil mentransfer ${count} Sampah`.trim(), m)
+                        conn.reply(m.chat, `Transfer successfully ${count} Rubbish`.trim(), m)
                     } catch (e) {
                         global.DATABASE._data.users[m.sender].sampah += count * 1
-                        m.reply('Gagal Menstransfer')
+                        m.reply('Transfer Failed')
                         console.log(e)
                         if (DevMode) {
                             for (let jid of global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid)) {
