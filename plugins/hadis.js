@@ -21,7 +21,7 @@ malik
 1 - 1594
 muslim
 1 - 5362`
-    if (!args[1]) throw `hadist yang ke berapa?\ncontoh: ${usedPrefix + command} ${args[0]} 1`
+    if (!args[1]) throw `what hadith?\nexample: ${usedPrefix + command} ${args[0]} 1`
     try {
         let res = await fetch(`https://islamic-api-indonesia.herokuapp.com/api/data/json/hadith/${args[0]}`)
         let json = await res.json()
