@@ -1,8 +1,7 @@
 let handler = (m, { usedPrefix, command }) => {
 
  m.reply(`
-Command *${m.text}*
-not found  ${usedPrefix}menu
+Did you mean ${usedPrefix}help
 `.trim())
 }
 handler.command = new RegExp
