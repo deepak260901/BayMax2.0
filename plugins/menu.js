@@ -36,6 +36,12 @@ const defaultMenu = {
 Nᴏᴛᴇ📝: If You Have any Issues with Bot or any error Then Contact Owner or Type /report to report Owner:)
 
 ʙᴏᴛ sɪᴅᴇ ɪɴғᴏ:- ZeroTwo made with Language Javascript And Via Node js!
+No.1 Don't call Bot Avoid Blocking.
+No.2 Don't spam in Bot Dm or Owner Dm.
+No.3 If Bot is Not responding wait 2min.
+
+    ಠ◡ಠ Hope you follow this worthless Rule;)
+Have A Great day 💫✌🏻.
 ════════════════
   💠Information💠
 ════════════════
