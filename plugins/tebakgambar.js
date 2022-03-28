@@ -1,34 +1,34 @@
 let fetch = require('node-fetch')
 
-let timeout = 120000
-let poin = 500
-let src
-let handler = async (m, { conn, usedPrefix }) => {
-  conn.tebakgambar = conn.tebakgambar ? conn.tebakgambar : {}
-  let id = m.chat
-  if (id in conn.tebakgambar) {
-    conn.reply(m.chat, 'Masih ada soal belum terjawab di chat ini', conn.tebakgambar[id][0])
-    throw false
-  }
-  if (!src) src = await (await fetch(global.API('https://raw.githubusercontent.com', '/BochilTeam/database/master/games/tebakgambar.json'))).json()
-  let json = src[Math.floor(Math.random() * src.length)]
-  if (!json) throw json
-  let caption = `
-Timeout *${(timeout / 1000).toFixed(2)} detik*
-Ketik ${usedPrefix}hint untuk hint
-Bonus: ${poin} XP
-    `.trim()
-  conn.tebakgambar[id] = [
-    await conn.sendFile(m.chat, json.img, 'tebakgambar.jpg', caption, m, false),
-    json, poin,
-    setTimeout(() => {
-      if (conn.tebakgambar[id]) conn.reply(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, conn.tebakgambar[id][0])
-      delete conn.tebakgambar[id]
-    }, timeout)
-  ]
-}
-handler.help = ['tebakgambar']
-handler.tags = ['game']
-handler.command = /^tebakgambar/i
+ let timeout = 120000
+ let points = 500
+ let src
+ let handler = async(m, { conn, usedPrefix }) => {
+   conn.guess the picture = conn.guess the picture ?  conn.guessimage : {}
+   let id = m.chat
+   if (id in conn.tebak Gambar) {
+     conn.reply(m.chat, 'There are still unanswered questions in this chat', conn.tebak Gambar[id][0])
+     throw false
+   }
+   if (!src) src = await (await fetch(global.API('https://raw.githubusercontent.com', '/BochilTeam/database/master/games/tebakimage.json'))).json()
+   let json = src[Math.floor(Math.random() * src.length)]
+   if (!json) throw json
+   let caption = `
+ Timeout *${(timeout / 1000).toFixed(2)} seconds*
+ Type ${usedPrefix}hint for hint
+ Bonus: ${points} XP
+     `.trim()
+   conn.guessimage[id] = [
+     await conn.sendFile(m.chat, json.img, 'tebak Gambar.jpg', caption, m, false),
+     json, points,
+     setTimeout(() => {
+       if (conn.guessimage[id]) conn.reply(m.chat, `Time is up!\nAnswer is *${json.answer}*`, conn.guessimage[id][0])
+       delete conn.tebakimage[id]
+     }, timeout)
+   ]
+ }
+ handler.help = ['guess the image']
+ handler.tags = ['game']
+ handler.command = /^guessimage/i
 
-module.exports = handler
+ module.exports = handler
