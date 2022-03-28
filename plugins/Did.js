@@ -5,7 +5,7 @@ ${pickRandom([` *Did you mean /help*`])}
 `.trim()
 conn.reply(m.chat, teks, m, { contextInfo: { mentionedJid: [m.sender] }})
 }
-handler.customPrefix = /^(!|\)$/i
+handler.customPrefix = /${usedPrefix}/i
 handler.command = new RegExp
 
 module.exports = handler
