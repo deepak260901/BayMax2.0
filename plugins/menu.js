@@ -85,19 +85,17 @@ No.3 If Bot is Not responding wait 2min.
     ಠ◡ಠ Hope you follow this worthless Rules;)
 Have A Great day 💫✌🏻.
 ═════════════════
-  💠Information💠
-═════════════════
 🧧Bot Name : ${conn.user.name}
 🌐Groups Chats : ${conn.chats.array.filter(v => v.jid.endsWith('g.us')).map(v => v.jid).length}
 💬Personal Chats : ${conn.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net')).map(v => v.jid).length} 
 👾Uptime Bot : ${clockString(process.uptime() * 1000)}
 🎗️Host Number : @${global.conn.user.jid.split('@')[0]}
 ═════════════════
-Here📃 is My usable Commands %readmore`.trimStart()
+Here📃 is My Listed commands... %readmore`.trimStart()
 let header = conn.menu.header || '═══━❰ %category ❱━══'
     let body   = conn.menu.body   || ' 〽️ %cmd%islimit'
     let footer = conn.menu.footer || '═════════════════\n'
-    let after  = conn.menu.after  || `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
+    let after  = conn.menu.after  || `\nゼロツー❤️\n
     let _text  = before + '\n'
     for (let tag in groups) {
       _text += header.replace(/%category/g, tags[tag]) + '\n'
@@ -122,6 +120,7 @@ let header = conn.menu.header || '═══━❰ %category ❱━══'
         text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     let pp = await conn.getProfilePicture(conn.user.jid).catch(_ => path.join(__dirname, '../src/avatar_contact.png'))
     conn.sendButton(m.chat,text.trim(), author,  pp,  [
+    conn.fakeReply(m.chat, '*BOT VERIFIED* ', '0@s.whatsapp.net', '*TOSHIRO BOT ZERO-TWO*')
 ], { quoted: m}).catch(_ => conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m)).catch(_ => conn.reply(m.chat, text.trim(), m))
   } catch (e) {
     conn.reply(m.chat, 'Sorry Menu Error!!r', m)
