@@ -71,18 +71,18 @@ let handler  = async (m, { conn, usedPrefix: _p, DevMode }) => {
     }
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || ` 
-(❤️ω❤️)Konnichiwa %name👋🏻 I'm ${conn.user.name}
+(❤️ω❤️)Konnichiwa %name👋🏻 I'm ${conn.user.name}!
 
 Nᴏᴛᴇ📝: If You Have any Issues with Bot or any error Then Contact Owner or Type /report to report Owner:)
 
-Author:- Toshiro Hitsugaya
+Author:- Toshiro:)
 Bot Side:- Build whit Javascript and Via Nodejs!
-       [ SHORT RULES ]
+
 No.1 Don't call Bot Avoid Blocking.
 No.2 Don't spam in Bot Dm or Owner Dm.
 No.3 If Bot is Not responding wait 2min.
 
-    ಠ◡ಠ Hope you follow this worthless Rule;)
+    ಠ◡ಠ Hope you follow this worthless Rules;)
 Have A Great day 💫✌🏻.
 ═════════════════
   💠Information💠
