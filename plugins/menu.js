@@ -118,7 +118,7 @@ let header = conn.menu.header || '═══━❰ %category ❱━══'
       readmore: readMore
     }
         text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    conn.sendFile(m.chat, fs.readFileSync(`./src/zero.gif`), 'zero.gif', text.trim(), m)
+    conn.sendFile(m.chat, fs.readFileSync(`./src/zero-.gif`), 'zero-.gif', text.trim(), m)
   } catch (e) {
     conn.reply(m.chat, 'Sorry Menu Error!!r', m)
     throw e
