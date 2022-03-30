@@ -75,8 +75,8 @@ let handler  = async (m, { conn, usedPrefix: _p, DevMode }) => {
 
 Nᴏᴛᴇ📝: If You Have any Issues with Bot or any error Then Contact Owner or Type /report to report Owner:)
 
-Author:- 𝕋𝕠𝕤𝕙𝕚𝕣𝕠
-Bot Side:- Build whit Javascript and Via Nodejs!
+Aᴜᴛʜᴏʀ:- 𝕋𝕠𝕤𝕙𝕚𝕣𝕠 (灬º‿º灬)
+Bᴏᴛ Sɪᴅᴇ:- 𝙈𝙖𝙙𝙚 𝙒𝙞𝙩𝙝 𝙇𝙖𝙣𝙜𝙪𝙜𝙚 𝙅𝙖𝙫𝙖𝙨𝙘𝙧𝙞𝙥𝙩 𝘼𝙣𝙙 𝙑𝙞𝙖 𝙉𝙤𝙙𝙚 𝙅𝙨!
 
 ┌───┈[ ᖇᑌᒪᗴՏ ]┈───
 │➪ 𝗗𝗼𝗻'𝘁 𝗰𝗮𝗹𝗹 𝗕𝗼𝘁 𝗔𝘃𝗼𝗶𝗱 𝗕𝗹𝗼𝗰𝗸𝗶𝗻𝗴!
