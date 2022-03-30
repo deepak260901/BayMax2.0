@@ -38,13 +38,13 @@ async function handler(m) {
     }
 
     let caption = `
-*Soal:* ${json.soal} 
+*Question:* ${json.soal} 
 
-Terdapat *${json.jawaban.length}* jawaban${json.jawaban.find(v => v.includes(' ')) ? `
-(beberapa jawaban terdapat spasi)
+There is *${json.jawaban.length}* answer${json.jawaban.find(v => v.includes(' ')) ? `
+(some answers have spaces)
 `: ''}
 
-+${winScore} XP tiap jawaban benar
++${winScore} XP each correct answer
     `.trim()
     this.game[id] = {
         id,
