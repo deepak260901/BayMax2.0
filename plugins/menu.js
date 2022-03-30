@@ -24,31 +24,34 @@ let handler  = async (m, { conn, usedPrefix: _p, DevMode }) => {
     let uptime = clockString(_uptime)
     let totalreg = Object.keys(global.DATABASE._data.users).length
     let tags = {
-     'main': 'Main',
-     'rpg': 'Epic RPG',
-     'game': 'Game',
-     'xp': 'Exp & Limit',
-     'sticker': 'Sticker',
-     'shell': 'Magic Shell',
-     'admin': 'Admin',
-     'group': 'Group',
-     'premium': 'Premium',
-     'internet': 'Internet',
-     'anonymous': 'Anonymous Chat',
-     'nulis': 'MagerNulis & Logo',
-     'downloader': 'Downloader',
-     'tools': 'Tools',
-     'fun': 'Fun',
-     'database': 'Database',
-     'vote': 'Voting',
-     'nsfw': 'Nsfw',
-     'absen': 'Absen',
-     'jadibot': 'Jadi Bot',
-     'owner': 'Owner',
-     'host': 'Host',
-     'advanced': 'Advanced',
-     'info': 'Info',
-    ": 'No Category',
+      'main': 'Main',
+      'game' : 'Games',
+      'maker' : 'Maker',
+      'about': 'About And Info',
+      'rpg': 'Rpg',
+      'xp': 'Exp & Limit',
+      'premium': 'Premium',
+      'image' : 'Image',
+      'indonesian' : 'For Indonesians',
+      'game': 'Games',
+      'sticker': 'Sticker',
+      'spammer' : 'Spammer',
+      'audio': 'audio',
+      'database': 'Database',
+      'quotes': 'Quotes',
+      'internet': 'Internet',
+      'downloader': 'Downloader',
+      'tools': 'Tools',
+      'admin': 'Admin',
+	  'ep' : 'ep',
+	  'te' : 'te',
+      'group': 'Group',
+      'owner': 'Owner',
+      'host': 'Host',
+      'tools': 'tool',
+      'advanced': 'Advanced',
+      'info': 'Info',
+      '': 'No Category',
     }
     for (let plugin of Object.values(global.plugins))
       if (plugin && 'tags' in plugin)
@@ -71,30 +74,22 @@ let handler  = async (m, { conn, usedPrefix: _p, DevMode }) => {
     }
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || ` 
-(❤️ω❤️)Konnichiwa %name👋🏻 I'm ${conn.user.name}!
+╔═════════════════❀
+║🕵️‍♂️ Hey, %name!
+╚═════════════════❀
 
-Nᴏᴛᴇ📝: If You Have any Issues with Bot or any error Then Contact Owner or Type /report to report Owner:)
-
-Aᴜᴛʜᴏʀ:- 𝕋𝕠𝕤𝕙𝕚𝕣𝕠 (灬º‿º灬)
-Bᴏᴛ Sɪᴅᴇ:- 𝙈𝙖𝙙𝙚 𝙒𝙞𝙩𝙝 𝙇𝙖𝙣𝙜𝙪𝙜𝙚 𝙅𝙖𝙫𝙖𝙨𝙘𝙧𝙞𝙥𝙩 𝘼𝙣𝙙 𝙑𝙞𝙖 𝙉𝙤𝙙𝙚 𝙅𝙨!
-
-┌───┈[ ᖇᑌᒪᗴՏ ]┈───
-│➪ 𝗗𝗼𝗻'𝘁 𝗰𝗮𝗹𝗹 𝗕𝗼𝘁 𝗔𝘃𝗼𝗶𝗱 𝗕𝗹𝗼𝗰𝗸𝗶𝗻𝗴!
-│➪ 𝗗𝗼𝗻'𝘁 𝗦𝗽𝗮𝗺 𝗜𝗻 𝗕𝗼𝘁 𝗗𝗺 𝗢𝗿 𝗢𝘄𝗻𝗲𝗿!
-│➪ 𝗜𝗳 𝗕𝗼𝘁 𝗜𝘀 𝗡𝗼𝘁 𝗥𝗲𝘀𝗽𝗼𝗻𝗱𝗶𝗻 𝗧𝗵𝗲𝗻 𝗜𝘁 𝗠𝗲𝗮𝗻𝘀 𝗢𝘄𝗻𝗲𝗿 𝗜𝗻𝘁𝗲𝗿𝗻𝗲𝘁 𝗜𝘀𝘀𝘂𝗲 𝗢𝗿 𝗕𝗼𝘁 𝗜𝘀 𝗢𝗳𝗳𝗹𝗶𝗻𝗲.
-└───┈[ 𝗭𝗲𝗿𝗼-𝗧𝘄𝗼 ]┈───
-
-┏ ┅ ━━━━━━━━━━━━━━━━━ ┅ ━ 
-┃Bᴏᴛ Nᴀᴍᴇ : ${conn.user.name}
-┃Gʀᴏᴜᴘs Cʜᴀᴛs : ${conn.chats.array.filter(v => v.jid.endsWith('g.us')).map(v => v.jid).length}
-┃Pᴇʀsɴᴏᴀʟ Cʜᴀᴛs : ${conn.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net')).map(v => v.jid).length} 
-┃Uᴘᴛɪᴍᴇ Bᴏᴛ : ${clockString(process.uptime() * 1000)}
-┃Hᴏsᴛ Nᴜᴍʙᴇʀ : @${global.conn.user.jid.split('@')[0]}
-┗ ┅ ━━━━━━━━━━━━━━━━━ ┅ ━
-Hᴇʀᴇ ɪs ᴍʏ ᴄᴏᴍᴍᴀɴᴅ ʟɪsᴛ📃 %readmore`.trimStart()
-let header = conn.menu.header || '┏ ┅ ━━「 %category 」━━'
-    let body   = conn.menu.body   || '┃ 〽️ %cmd%islimit'
-    let footer = conn.menu.footer || '┗ ┅ ━━━━━━━━━━━ ┅ ━\n'
+🤖 *Bot Name* : ${conn.user.name}
+💬 *Groups Chats* : ${conn.chats.array.filter(v => v.jid.endsWith('g.us')).map(v => v.jid).length}
+🌐 *Personal Chats* : ${conn.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net')).map(v => v.jid).length}
+🪀 *Wa Web Name* : ${conn.browserDescription[0]}
+🥏 *Wa Web Version* : ${conn.browserDescription[2]}
+🖥️ *Browser* : ${conn.browserDescription[1]}
+🧮 *Uptime Bot* : ${clockString(process.uptime() * 1000)}
+📲 *Host Number* : @${global.conn.user.jid.split('@')[0]}
+╚═════════════════❀ %readmore`.trimStart()
+let header = conn.menu.header || '╔═「 %category 」══❀'
+    let body   = conn.menu.body   || '║ ☆ %cmd%islimit'
+    let footer = conn.menu.footer || '╚═════════════════❀\n'
     let after  = conn.menu.after  || `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
     let _text  = before + '\n'
     for (let tag in groups) {
@@ -118,7 +113,7 @@ let header = conn.menu.header || '┏ ┅ ━━「 %category 」━━'
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).join`|`})`, 'g'), (_, name) => replace[name])
-    fs.readFileSync(`./src/zero.gif`), 'zero.gif', text.trim(), m)
+    conn.sendFile(m.chat, fs.readFileSync(`./src/pew.mp4`), 'pew.mp4', text.trim(), m)
   } catch (e) {
     conn.reply(m.chat, 'Sorry Menu Error!!r', m)
     throw e
