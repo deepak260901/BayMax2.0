@@ -21,9 +21,11 @@ module.exports = {
       let str = `
 ${teks} 
 
-• Previous Level : ${before}
-• Level New  : ${lvlnow}
-
+┌───❁┈[ LEVEL UP ]┈❁───
+│➸ Previous Level : ${before}
+│➸ Level New  : ${lvlnow}
+│➸ Congratulations : 🎉🎊
+└────❁┈[ Zero-Two ]┈❁────
 **
 `.trim()
       if (global.support.convert || global.support.magick || global.support.gm) {
