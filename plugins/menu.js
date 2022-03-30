@@ -75,21 +75,20 @@ let handler  = async (m, { conn, usedPrefix: _p, DevMode }) => {
 
 Nᴏᴛᴇ📝: If You Have any Issues with Bot or any error Then Contact Owner or Type /report to report Owner:)
 
-Author:- Toshiro:)
+Author:- 𝕋𝕠𝕤𝕙𝕚𝕣𝕠
 Bot Side:- Build whit Javascript and Via Nodejs!
 
-No.1 Don't call Bot Avoid Blocking.
-No.2 Don't spam in Bot Dm or Owner Dm.
-No.3 If Bot is Not responding wait 2min.
-
-    ಠ◡ಠ Hope you follow this worthless Rules;)
-Have A Great day 💫✌🏻.
+┌───┈[ ᖇᑌᒪᗴՏ ]┈───
+│➪ 𝗗𝗼𝗻'𝘁 𝗰𝗮𝗹𝗹 𝗕𝗼𝘁 𝗔𝘃𝗼𝗶𝗱 𝗕𝗹𝗼𝗰𝗸𝗶𝗻𝗴!
+│➪ 𝗗𝗼𝗻'𝘁 𝗦𝗽𝗮𝗺 𝗜𝗻 𝗕𝗼𝘁 𝗗𝗺 𝗢𝗿 𝗢𝘄𝗻𝗲𝗿!
+│➪ 𝗜𝗳 𝗕𝗼𝘁 𝗜𝘀 𝗡𝗼𝘁 𝗥𝗲𝘀𝗽𝗼𝗻𝗱𝗶𝗻 𝗧𝗵𝗲𝗻 𝗜𝘁 𝗠𝗲𝗮𝗻𝘀 𝗢𝘄𝗻𝗲𝗿 𝗜𝗻𝘁𝗲𝗿𝗻𝗲𝘁 𝗜𝘀𝘀𝘂𝗲 𝗢𝗿 𝗕𝗼𝘁 𝗜𝘀 𝗢𝗳𝗳𝗹𝗶𝗻𝗲.
+└───┈[ 𝗭𝗲𝗿𝗼-𝗧𝘄𝗼 ]┈───
 ┏ ┅ ━━━━━━━━━━━━━━━━━ ┅ ━ 
-Bot Name : ${conn.user.name}
-Groups Chats : ${conn.chats.array.filter(v => v.jid.endsWith('g.us')).map(v => v.jid).length}
-Personal Chats : ${conn.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net')).map(v => v.jid).length} 
-Uptime Bot : ${clockString(process.uptime() * 1000)}
-Host Number : @${global.conn.user.jid.split('@')[0]}
+┃Bᴏᴛ Nᴀᴍᴇ : ${conn.user.name}
+┃Gʀᴏᴜᴘs Cʜᴀᴛs : ${conn.chats.array.filter(v => v.jid.endsWith('g.us')).map(v => v.jid).length}
+┃Pᴇʀsɴᴏᴀʟ Cʜᴀᴛs : ${conn.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net')).map(v => v.jid).length} 
+┃Uᴘᴛɪᴍᴇ Bᴏᴛ : ${clockString(process.uptime() * 1000)}
+┃Hᴏsᴛ Nᴜᴍʙᴇʀ : @${global.conn.user.jid.split('@')[0]}
 ┗ ┅ ━━━━━━━━━━━━━━━━━ ┅ ━
 Here📃 is My Listed commands... %readmore`.trimStart()
 let header = conn.menu.header || '┏ ┅ ━━❰ %category ❱━━━'
