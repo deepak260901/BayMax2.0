@@ -90,7 +90,7 @@ Bot Side:- Build whit Javascript and Via Nodejs!
 ┃Uᴘᴛɪᴍᴇ Bᴏᴛ : ${clockString(process.uptime() * 1000)}
 ┃Hᴏsᴛ Nᴜᴍʙᴇʀ : @${global.conn.user.jid.split('@')[0]}
 ┗ ┅ ━━━━━━━━━━━━━━━━━ ┅ ━
-Here📃 is My Listed commands... %readmore`.trimStart()
+𝗛𝗲𝗿𝗲 𝗜𝘀 𝗠𝘆 𝗖𝗼𝗺𝗺𝗮𝗻𝗱 𝗟𝗶𝘀𝘁📃... %readmore`.trimStart()
 let header = conn.menu.header || '┏ ┅ ━━❰ %category ❱━━━'
     let body   = conn.menu.body   || '┃ 〽️ %cmd%islimit'
     let footer = conn.menu.footer || '┗ ┅ ━━━━━━━━━━━━━\n'
