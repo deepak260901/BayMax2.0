@@ -3,7 +3,7 @@ global.linkGC = []
 global.Owner = {
   // use the phone number with the country code, for example Indonesia '62' America '1' etc
   '919609900020': { // put your number here
-    name: 'Owner Metro Bot/Creator games-wabot',
+    name: 'Zero-Two',
     isDev: false, // if true this number will send if bot have bug and developer mode true
     isReport: false, // if true this number will send if user use command /report or /join
     isCreator: true // if true this number will send if user use command /owner or /creator
@@ -52,7 +52,7 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.packname = 'BayMax (Bot)'
+global.packname = 'ZeroTwo'
 global.author = '© copyright by Toshiro'
 
 global.multiplier = 39 // The higher, The harder levelup
