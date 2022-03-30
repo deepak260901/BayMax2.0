@@ -71,7 +71,7 @@ let handler  = async (m, { conn, usedPrefix: _p, DevMode }) => {
     }
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || ` 
-(❤️ω❤️)Konichiwa %name I'm ${conn.user.name}
+(❤️ω❤️)Konichiwa %name👋🏻 I'm ${conn.user.name}
 Aᴜᴛʜᴏʀ:- 𝕋𝕠𝕤𝕙𝕚𝕣𝕠 (灬º‿º灬)
 Bᴏᴛ Sɪᴅᴇ:- 𝙈𝙖𝙙𝙚 𝙒𝙞𝙩𝙝 𝙇𝙖𝙣𝙜𝙪𝙜𝙚 𝙅𝙖𝙫𝙖𝙨𝙘𝙧𝙞𝙥𝙩 𝘼𝙣𝙙 𝙑𝙞𝙖 𝙉𝙤𝙙𝙚 𝙅𝙨!
 ┌───┈[ ᖇᑌᒪᗴՏ ]┈───
@@ -86,9 +86,9 @@ Bᴏᴛ Sɪᴅᴇ:- 𝙈𝙖𝙙𝙚 𝙒𝙞𝙩𝙝 𝙇𝙖𝙣𝙜𝙪𝙜�
 ┃Uᴘᴛɪᴍᴇ Bᴏᴛ : ${clockString(process.uptime() * 1000)}
 ┃Hᴏsᴛ Nᴜᴍʙᴇʀ : @${global.conn.user.jid.split('@')[0]}
 ┗ ┅ ━━━━━━━━━━━━━━━━━ ┅ ━ %readmore`.trimStart()
-let header = conn.menu.header || '╔═「 %category 」══❀'
-    let body   = conn.menu.body   || '║ ☆ %cmd%islimit'
-    let footer = conn.menu.footer || '╚═════════════════❀\n'
+let header = conn.menu.header || '┏ ━━「 %category 」━━'
+    let body   = conn.menu.body   || '┃ 〽️ %cmd%islimit'
+    let footer = conn.menu.footer || '┗ ┅ ━━━━━━━━━━━ ┅ ━\n'
     let after  = conn.menu.after  || `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
     let _text  = before + '\n'
     for (let tag in groups) {
@@ -112,7 +112,9 @@ let header = conn.menu.header || '╔═「 %category 」══❀'
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).join`|`})`, 'g'), (_, name) => replace[name])
-    conn.sendFile(m.chat, fs.readFileSync(`./src/pew.mp4`), 'pew.mp4', text.trim(), m)
+    let pp = await conn.getProfilePicture(conn.user.jid).catch(_ => path.join(__dirname, '../src/avatar_contact.png'))
+    conn.sendButton(m.chat,text.trim(), author,  pp,  [
+], { quoted: m}).catch(_ => conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m)).catch(_ => conn.reply(m.chat, text.trim(), m))
   } catch (e) {
     conn.reply(m.chat, 'Sorry Menu Error!!r', m)
     throw e
