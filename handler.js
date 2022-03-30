@@ -481,10 +481,10 @@ ${(global.linkGC).map((v, i) => '*Group ' + (i + 1) + '*\n' + v).join`\n\n`}
     let chat = global.DATABASE._data.chats[m.key.remoteJid]
     if (chat.delete) return
     await this.reply(m.key.remoteJid, `
-Detected @${m.participant.split`@`[0]} deleted message
+Detected @${m.participant.split`@`[0]} deleted the message
 
 To turn off this feature, Type
-*.enable delete*
+*.disable delete*
 `.trim(), m.message, {
       contextInfo: {
         mentionedJid: [m.participant]
