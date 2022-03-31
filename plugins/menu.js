@@ -74,19 +74,15 @@ let handler  = async (m, { conn, usedPrefix: _p, DevMode }) => {
     }
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || ` 
-╔═════════════════❀
-║🕵️‍♂️ Hey, %name!
-╚═════════════════❀
-
-🤖 *Bot Name* : ${conn.user.name}
-💬 *Groups Chats* : ${conn.chats.array.filter(v => v.jid.endsWith('g.us')).map(v => v.jid).length}
-🌐 *Personal Chats* : ${conn.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net')).map(v => v.jid).length}
-🪀 *Wa Web Name* : ${conn.browserDescription[0]}
-🥏 *Wa Web Version* : ${conn.browserDescription[2]}
-🖥️ *Browser* : ${conn.browserDescription[1]}
-🧮 *Uptime Bot* : ${clockString(process.uptime() * 1000)}
-📲 *Host Number* : @${global.conn.user.jid.split('@')[0]}
-╚═════════════════❀ %readmore`.trimStart()
+(❤️◍•ᴗ•◍❤️)Konnichiwa %name Darling 👋🏻
+Note📝: If You Having Any Type Of Issues And Bug Then Contact Owner Or Type /Report And Describe About Issue!
+┏ ┅ ━━━━━━━━━━━━━━━ ┅ ━❀
+┃ 𝖡𝗈𝗍 𝖭𝖺𝗆𝖾 : ${conn.user.name}
+┃ 𝖦𝗋𝗈𝗎𝗉𝗌 𝖢𝗁𝖺𝗍𝗌 : ${conn.chats.array.filter(v => v.jid.endsWith('g.us')).map(v => v.jid).length}
+┃ 𝖯𝗋𝖾𝗌𝗇𝗈𝖺𝗅 𝖢𝗁𝖺𝗍𝗌 : ${conn.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net')).map(v => v.jid).length}
+┃ 𝖴𝗉𝗍𝗂𝗆𝖾 𝖡𝗈𝗍 : ${clockString(process.uptime() * 1000)}
+┃ 𝖧𝗈𝗌𝗍 𝖭𝗎𝗆𝖻𝖾𝗋 : @${global.conn.user.jid.split('@')[0]}
+┗ ┅ ━━━━━━━━━━━━━━━ ┅ ━❀ %readmore`.trimStart()
 let header = conn.menu.header || '╔═「 %category 」══❀'
     let body   = conn.menu.body   || '║ ☆ %cmd%islimit'
     let footer = conn.menu.footer || '╚═════════════════❀\n'
