@@ -91,7 +91,6 @@ let header = conn.menu.header || '┏━「 %category 」━━'
         for (let help of menu.help)
           _text += body.replace(/%cmd/g, menu.prefix ? help : '%p' + help).replace(/%islimit/g, menu.limit ? ' (Limit)' : '')  + '\n'
       }
-      _text += footer + '\n'
     }
     _text += after
     text =  typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ? _text : ''
