@@ -107,7 +107,8 @@ let header = conn.menu.header || '┏━「 %category 」━━❀'
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).join`|`})`, 'g'), (_, name) => replace[name])
      let pp = await conn.getProfilePicture(conn.user.jid).catch(_ => path.join(__dirname, '../src/avatar_contact.png'))
-    conn.sendButton(m.chat,text.trim(), author,  pp,  [
+    conn.sendButton(m.chat, `_𝗥𝗲𝗮𝗱𝗶𝗻𝗴...𝗠𝗲𝗻𝘂.𝗷𝘀_`, '© copyright by Toshiro BOT', 'Menu', '.menu', m) 
+}
 ], { quoted: m}).catch(_ => conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m)).catch(_ => conn.reply(m.chat, text.trim(), m))
   } catch (e) {
     conn.reply(m.chat, 'Sorry Menu Error!!r', m)
