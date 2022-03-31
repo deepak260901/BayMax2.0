@@ -73,17 +73,17 @@ let handler  = async (m, { conn, usedPrefix: _p, DevMode }) => {
     let before = conn.menu.before || ` 
 (❤️◍•ᴗ•◍❤️)Konnichiwa %name Darling 👋🏻
 Note📝: If You Having Any Type Of Issues And Bug Then Contact Owner Or Type /Report And Describe About Issue!
-┏ ┅ ━━━━━━━━━━━━━━━ ┅ ━❀
+┏ ┅ ━━━━━━━━━━━ ┅ ━
 ┃ 𝖡𝗈𝗍 𝖭𝖺𝗆𝖾 : ${conn.user.name}
 ┃ 𝖦𝗋𝗈𝗎𝗉𝗌 𝖢𝗁𝖺𝗍𝗌 : ${conn.chats.array.filter(v => v.jid.endsWith('g.us')).map(v => v.jid).length}
 ┃ 𝖯𝗋𝖾𝗌𝗇𝗈𝖺𝗅 𝖢𝗁𝖺𝗍𝗌 : ${conn.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net')).map(v => v.jid).length}
 ┃ 𝖴𝗉𝗍𝗂𝗆𝖾 𝖡𝗈𝗍 : ${clockString(process.uptime() * 1000)}
 ┃ 𝖧𝗈𝗌𝗍 𝖭𝗎𝗆𝖻𝖾𝗋 : @${global.conn.user.jid.split('@')[0]}
-┗ ┅ ━━━━━━━━━━━━━━━ ┅ ━❀ %readmore`.trimStart()
-let header = conn.menu.header || '┏━「 %category 」━━❀'
+┗ ┅ ━━━━━━━━━━━ ┅ ━ %readmore`.trimStart()
+let header = conn.menu.header || '┏━「 %category 」━━'
     let body   = conn.menu.body   || '┃ 〽️ %cmd%islimit'
-    let footer = conn.menu.footer || '┗ ┅ ━━━━━━━━ ┅ ━\n❀\n'
-    let after  = conn.menu.after  || `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
+    let footer = conn.menu.footer || '┗ ┅ ━━━━━━ ┅ ━\n'
+    let after  = conn.menu.after  || `ゼロツー❤️
     let _text  = before + '\n'
     for (let tag in groups) {
       _text += header.replace(/%category/g, tags[tag]) + '\n'
