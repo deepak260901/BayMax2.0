@@ -83,9 +83,9 @@ Note📝: If You Having Any Type Of Issues And Bug Then Contact Owner Or Type /R
 ┃ 𝖴𝗉𝗍𝗂𝗆𝖾 𝖡𝗈𝗍 : ${clockString(process.uptime() * 1000)}
 ┃ 𝖧𝗈𝗌𝗍 𝖭𝗎𝗆𝖻𝖾𝗋 : @${global.conn.user.jid.split('@')[0]}
 ┗ ┅ ━━━━━━━━━━━━━━━ ┅ ━❀ %readmore`.trimStart()
-let header = conn.menu.header || '╔═「 %category 」══❀'
-    let body   = conn.menu.body   || '║ ☆ %cmd%islimit'
-    let footer = conn.menu.footer || '╚═════════════════❀\n'
+let header = conn.menu.header || '┏━「 %category 」━━❀'
+    let body   = conn.menu.body   || '┃ 〽️ %cmd%islimit'
+    let footer = conn.menu.footer || '┗ ┅ ━━━━━━━━ ┅ ━\n❀\n'
     let after  = conn.menu.after  || `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
     let _text  = before + '\n'
     for (let tag in groups) {
