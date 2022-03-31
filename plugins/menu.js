@@ -84,7 +84,6 @@ let header = conn.menu.header || '┏━「 %category 」━━'
     let body   = conn.menu.body   || '┃ 〽️ %cmd%islimit'
     let footer = conn.menu.footer || '┗ ┅ ━━━━━━ ┅ ━\n'
     let after  = conn.menu.after  || `
-    let _text  = before + '\n'
     for (let tag in groups) {
       _text += header.replace(/%category/g, tags[tag]) + '\n'
       for (let menu of groups[tag]) {
