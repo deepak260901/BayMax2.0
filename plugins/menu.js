@@ -109,7 +109,9 @@ let header = conn.menu.header || '╔═「 %category 」══❀'
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).join`|`})`, 'g'), (_, name) => replace[name])
-    conn.sendFile(m.chat, fs.readFileSync(`./src/pew.mp4`), 'pew.mp4', text.trim(), m)
+     let pp = await conn.getProfilePicture(conn.user.jid).catch(_ => path.join(__dirname, '../src/avatar_contact.png'))
+    conn.sendButton(m.chat,text.trim(), author,  pp,  [
+], { quoted: m}).catch(_ => conn.sendFile(m.chat, pp, 'menu.jpg', text.trim(), m)).catch(_ => conn.reply(m.chat, text.trim(), m))
   } catch (e) {
     conn.reply(m.chat, 'Sorry Menu Error!!r', m)
     throw e
