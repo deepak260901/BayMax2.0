@@ -4,10 +4,10 @@ let handler = async (m, { conn }) => {
 let totalfeatures = Object.values(global.plugins).filter(
     (v) => v.help && v.tags
   ).length;
-conn.sendButton(m.chat, `_*total features: 𝙍𝙚𝙖𝙙𝙞𝙣𝙜 𝙈𝙚𝙣𝙪.𝙟𝙨*_`, '©ZeroTwo 2022', 'Menu', '/menu', m) 
+conn.sendButton(m.chat, `_𝗥𝗲𝗮𝗱𝗶𝗻𝗴...𝗠𝗲𝗻𝘂.𝗷𝘀_`, '© copyright by Toshiro BOT', 'Menu', '.menu', m) 
 }
 
-handler.help = ['help']
-handler.tags = ['info']
-handler.command = ['help']
+handler.help = ['menu','help','?']
+handler.tags = ['main']
+handler.command = /^(menu|help)$/i
 module.exports = handler
