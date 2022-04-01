@@ -3,9 +3,9 @@ let handler = async (m, { command, usedPrefix, text }) => {
     let M = WAMessageProto.WebMessageInfo
     let which = command.replace(/\+|add/i, '')
     if (!m.quoted) throw 'Reply Pesan!'
-    if (!text) throw `Gunakan *${usedPrefix}list${which}* untuk melihat list nya`
+    if (!text) throw `use *${usedPrefix}list${which}* to see the list`
     let msgs = global.DATABASE._data.msgs
-    if (text in msgs) throw `'${text}' telah terdaftar di list pesan`
+    if (text in msgs) throw `'${text}' has been registered in the message list`
     msgs[text] = M.fromObject(await m.getQuotedObj()).toJSON()
     m.reply(`Successfully added message in message list as '${text}'
     
