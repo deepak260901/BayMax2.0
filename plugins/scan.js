@@ -15,14 +15,14 @@ let handler = async (m, { conn, args }) => {
         }
         if (user.jid in global.DATABASE._data.users) isInDatabase = true
         let str = ` 
-*Nama:* ${conn.getName(user.jid)}
-*Nomor:* ${splitM(user.jid)}
+*Name:* ${conn.getName(user.jid)}
+*Number:* ${splitM(user.jid)}
 *Mention:* ${toM(user.jid)}
 *Api:* wa.me/${splitM(user.jid)}
 *Jid:* ${user.jid}
 *Whatsapp Bussines:* ${user.isBusiness ? 'Yes' : 'No'}
 *In Database:* ${isInDatabase ? 'Yes' : 'No'}
-*Group Yang Sama Dengan BOT:* ${sameGroup.length} *Group*
+*Same Group With BOT:* ${sameGroup.length} *Group*
 `.trim()
         m.reply(str, m.chat, { 
             contextInfo: { 
@@ -32,7 +32,7 @@ let handler = async (m, { conn, args }) => {
     } else throw 'User Tidak Ditemukan!!'
 }
     
-handler.help = ['scan'].map(v => v + ' [nomor]')
+handler.help = ['scan'].map(v => v + ' [number]')
 handler.tags = ['tools']
 handler.command = /^scan$/i
 
