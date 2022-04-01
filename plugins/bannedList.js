@@ -3,19 +3,19 @@ let handler = async (m, { conn, usedPrefix }) => {
     let users = Object.entries(global.DATABASE.data.users).filter(user => user[1].Banneduser)
     
     m.reply(`
-┌ *List of Banned Chats*
+┌───┈[ List Of Banned Chats ]┈───
 │ Total : ${chats.length} Chat${chats ? '\n' + chats.map(([jid], i) => `
 │ ${i + 1}. ${conn.getName(jid) == undefined ? 'Unknown' : conn.getName(jid)}
 │ ${jid}
 `.trim()).join('\n') : ''}
-└────
+└───┈[ 𝗭𝗲𝗿𝗼-𝗧𝘄𝗼 ]┈───
 
-┌ *List of Banned Users*
+┌───┈[ List Of Banned Users ]┈───
 │ Total : ${users.length} User${users ? '\n' + users.map(([jid], i) => `
 │ ${i + 1}. ${conn.getName(jid) == undefined ? 'Unknown' : conn.getName(jid)}
 │ ${jid}
 `.trim()).join('\n') : ''}
-└────
+└───┈[ 𝗭𝗲𝗿𝗼-𝗧𝘄𝗼 ]┈───
 `.trim())
 }
 handler.help = ['bannedlist']
