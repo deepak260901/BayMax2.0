@@ -29,7 +29,7 @@ let handler = async (m, { conn, args }) => {
                 mentionedJid: conn.parseMention(str)
             }
         })
-    } else throw 'User Tidak Ditemukan!!'
+    } else throw 'User Not Found!!'
 }
     
 handler.help = ['scan'].map(v => v + ' [number]')
