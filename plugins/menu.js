@@ -375,9 +375,11 @@ mp4 instagram link
 
 
 *_🎐Great Hours Ahead 🎐_*
+
+____________________________________
 %readmore`.trimStart(),
   header: '┏━「 %category 」━',
-  body: '  ┃ 
+  body: '  ┃ 〽️ %cmd %islimit %isPremium',
   footer: '┗ ┅ ━━━━━━━━━ ┅ ━\n\n',
   after: `ゼロツー(❤️️ω❤️)
 `,
