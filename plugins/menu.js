@@ -379,7 +379,7 @@ mp4 instagram link
 ____________________________________
 %readmore`.trimStart(),
   header: '┏━「 %category 」━',
-  body: '  ┃ ,
+  body: '  ┃ %cmd %islimit %isPremium',
   footer: '┗ ┅ ━━━━━━━━━ ┅ ━\n\n',
   after: `ゼロツー(❤️️ω❤️)
 `,
