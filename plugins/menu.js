@@ -30,7 +30,7 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-`𝔸𝕤𝕥𝕣𝕠.𝕚𝕟𝕔🧣
+𝔸𝕤𝕥𝕣𝕠.𝕚𝕟𝕔🧣
 
 🗒️ *Notes*
 This is a offical 𝔸𝕤𝕥𝕣𝕠.𝕚𝕟𝕔🧣 Bot!
