@@ -9,7 +9,7 @@ let handler = async (m, { command, usedPrefix, text }) => {
     msgs[text] = M.fromObject(await m.getQuotedObj()).toJSON()
     m.reply(`Successfully added message in message list as '${text}'
     
-Akses dengan ${usedPrefix}get${which} ${text}
+Access with ${usedPrefix}get${which} ${text}
 
 or directly type the text`)
 }
