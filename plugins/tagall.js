@@ -1,7 +1,4 @@
 let handler = async (m, { conn, text, participants }) => {
-  let group = conn.chats.all().filter(v => v.jid.endsWith('g.us'))
-  let txt = ''
-  for (let v of group) txt += `${await conn.getName(v.jid)}\n${v.jid} [
   let users = participants.map(u => u.jid)
   let owner = '💠@' + m.chat.split`-`[0]
   let admins = participants.filter(u=> u.isAdmin && !u.isSuperAdmin).map(v=> v.jid).map(w=> '🧣@' + w.replace(/@.+/,'')).join`\n`
