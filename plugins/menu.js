@@ -386,10 +386,10 @@ mp4 instagram link
 ♦️ Usage: tsticker /tag image
 
 
-*_🎐Great Hours Ahead 🎐_*
+*_🎐Great Hours Ahead 🎐_*',
 
-____________________________________
-  footer: '━━━━━━━━━ ┅ ━\n\n',
+
+  footer: '______________________\n\n',
   after: `ゼロツー(❤️️ω❤️)
 `,
 }
