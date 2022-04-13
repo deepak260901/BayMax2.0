@@ -23,7 +23,7 @@ async function handler(m, { conn, args, isROwner }) {
 
             const buttonMessage = {
                 contentText: txt,
-                footerText: '©ZeroTwo 2022',
+                footerText: 'Baymax (BOT) 2022',
                 buttons: buttons,
                 headerType: 1
             }
@@ -128,7 +128,7 @@ function button(teks, user) {
     
     const buttonMessage = {
         contentText: teks,
-        footerText: '©ZeroTwo 2022',
+        footerText: 'BayMax (BOT) 2022',
         buttons: buttons,
         headerType: 1
     }
