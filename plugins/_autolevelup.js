@@ -22,9 +22,9 @@ module.exports = {
 ${teks} 
 
 ┌───┈[ LEVEL UP ]┈───
-│➸ Previous Level : ${before}
-│➸ Level New  : ${lvlnow}
-│➸ Congratulations : 🎉🎊
+│ Previous Level : ${before}
+│ Level New  : ${lvlnow}
+│ Congratulations : 🎉🎊
 └────┈[ 𝗕𝗮𝘆𝗠𝗮𝘅 ]┈────
 **
 `.trim()
