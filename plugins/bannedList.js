@@ -8,14 +8,14 @@ let handler = async (m, { conn, usedPrefix }) => {
 │ ${i + 1}. ${conn.getName(jid) == undefined ? 'Unknown' : conn.getName(jid)}
 │ ${jid}
 `.trim()).join('\n') : ''}
-└───┈[ 𝗭𝗲𝗿𝗼-𝗧𝘄𝗼 ]┈───
+└───┈[ 𝗕𝗮𝘆𝗠𝗮𝘅 ]┈───
 
 ┌───┈[ List Of Banned Users ]┈───
 │ Total : ${users.length} User${users ? '\n' + users.map(([jid], i) => `
 │ ${i + 1}. ${conn.getName(jid) == undefined ? 'Unknown' : conn.getName(jid)}
 │ ${jid}
 `.trim()).join('\n') : ''}
-└───┈[ 𝗭𝗲𝗿𝗼-𝗧𝘄𝗼 ]┈───
+└───┈[ 𝗕𝗮𝘆𝗠𝗮𝘅 ]┈───
 `.trim())
 }
 handler.help = ['bannedlist']
