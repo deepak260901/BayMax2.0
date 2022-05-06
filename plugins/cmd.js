@@ -77,13 +77,10 @@ let handler  = async (m, { conn, usedPrefix: _p, DevMode }) => {
 ╔═════════════════❀
 ║🕵️‍♂️ Hey, %name!
 ╚═════════════════❀
-
+╔═════════════════❀
 🤖 *Bot Name* : ${conn.user.name}
 💬 *Groups Chats* : ${conn.chats.array.filter(v => v.jid.endsWith('g.us')).map(v => v.jid).length}
 🌐 *Personal Chats* : ${conn.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net')).map(v => v.jid).length}
-🪀 *Wa Web Name* : ${conn.browserDescription[0]}
-🥏 *Wa Web Version* : ${conn.browserDescription[2]}
-🖥️ *Browser* : ${conn.browserDescription[1]}
 🧮 *Uptime Bot* : ${clockString(process.uptime() * 1000)}
 📲 *Host Number* : @${global.conn.user.jid.split('@')[0]}
 ╚═════════════════❀ %readmore`.trimStart()
