@@ -13,12 +13,12 @@ let handler = async (m, { conn, args }) => {
 • *Level Leaderboard Top ${len}* •
 You: *${userslevel.indexOf(m.sender) + 1}* from *${userslevel.length}*
 
-${sortedlevel.slice(0, len).map(([user, data], i) => (i + 1) + '. @' + user.split`@`[0] + ': *' + data.level + ' Lvl*').join`\n`}
+${sortedlevel.slice(0, len).map(([user, data], i) => (i + 1) + '. @' + user.split`@`[0] + ': *' + data.level + '〽️ Lvl*').join`\n`}
 
 • *Money Leaderboard Top ${len}* •
 You: *${usersmoney.indexOf(m.sender) + 1}* from *${usersmoney.length}*
 
-${sortedmoney.slice(0, len).map(([user, data], i) => (i + 1) + '. @' + user.split`@`[0] + ': *' + data.money + ' Money*').join`\n`}
+${sortedmoney.slice(0, len).map(([user, data], i) => (i + 1) + '. @' + user.split`@`[0] + ': *' + data.money + '💵 Money*').join`\n`}
 `.trim()
   conn.reply(m.chat, text, m, {
     contextInfo: {
