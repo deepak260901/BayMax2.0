@@ -8,7 +8,7 @@ let split = '|'
 let handler  = async (m, { conn, text, usedPrefix }) => {
   let lmao = 'emror?'
   let [txt, ...text2] = text.replace(lmao, '').trimStart().split(split)
-  if (!txt) throw 'Masukan Judul dan Deskripsi nya'
+  if (!txt) throw 'Enter the title and description'
   if (!text2) throw `Example : ${usedPrefix}so the SLAYER catalog?|THIS IS NOT A SELAYER BANG:>`
   let q = m.quoted ? m.quoted : m 
   let mime = (q.msg || q).mimetype || ''
@@ -26,7 +26,7 @@ let handler  = async (m, { conn, text, usedPrefix }) => {
 	    "description": `${text2}`, 
 	    "currencyCode": "IDR", 
             "priceAmount": "50000", 
-	    "retailerId": "ZeroTwo", 
+	    "retailerId": "BayMax", 
 	    "productImageCount": 1 
 	  }, 
 	  "businessOwnerJid": conn.user.jid
