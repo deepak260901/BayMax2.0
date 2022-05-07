@@ -1,6 +1,6 @@
 let handler = async (m, { conn, text, participants }) => {
   let users = participants.map(u => u.jid)
-  let owner = '💠@' + m.chat.split`-`[0]
+  let owner = '🌟@' + m.chat.split`-`[0]
   let admins = participants.filter(u=> u.isAdmin && !u.isSuperAdmin).map(v=> v.jid).map(w=> '🧣@' + w.replace(/@.+/,'')).join`\n`
   let members = participants.filter(u=> !u.isAdmin && !u.isSuperAdmin).map(v=> v.jid).map(w=> '🧧@' + w.replace(/@.+/,'')).join`\n`
   m.reply(text + '\n' + owner + '\n' + admins + '\n' + members)
