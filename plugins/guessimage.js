@@ -6,7 +6,7 @@ let fetch = require('node-fetch')
  let handler = async(m, { conn, usedPrefix }) => {
    conn.guess the picture = conn.guess the picture ?  conn.guessimage : {}
    let id = m.chat
-   if (id in conn.tebak Gambar) {
+   if (id in conn.tebak Picture) {
      conn.reply(m.chat, 'There are still unanswered questions in this chat', conn.tebak Gambar[id][0])
      throw false
    }
