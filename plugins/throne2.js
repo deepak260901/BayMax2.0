@@ -2,7 +2,7 @@ let util = require('util')
 let path = require('path')
 let { spawn } = require('child_process')
 
-// HartA tahta Xteam
+// Throne treasure Xteam
 let handler  = async (m, { conn, text }) => {
   let d = new Date
   let tgl = d.toLocaleDateString('id-Id')
