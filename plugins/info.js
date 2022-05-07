@@ -13,7 +13,6 @@ let handler  = async (m, { conn, usedPrefix }) => {
 ❑ *Bot Name* BayMax (BOT)
 ❑ *Bot Version:* 0.1.0
 ❑ *Wa web Name:* SERVER TOSHIRO
-❑ Hey I'm ZeroTwo made with Language Javascript And Via Node.js by Toshiro
 ❑ *Total user:* ${totalreg} *user*
 ❑ *Uptime:* ${uptime}
 `.trim(), m)
