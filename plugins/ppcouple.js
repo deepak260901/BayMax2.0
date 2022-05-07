@@ -1,5 +1,5 @@
-//made by kanna
-//Dan gw ganti bbrp doang:v
+//made by Toshiro
+//And I just changed a few :v
 
 let fetch = require("node-fetch")
 
@@ -8,8 +8,8 @@ let handler = async (m, { conn }) => {
   if (!res.ok) throw await res.text()
   let json = await res.json()
   if (!json.status) throw json
-  await conn.sendFile(m.chat, json.result.male, '', 'Nih PP Yg Cowo', m)
-  await conn.sendFile(m.chat, json.result.female, '', 'Dan Ni PP YgCewe', m)
+  await conn.sendFile(m.chat, json.result.male, '', 'Male', m)
+  await conn.sendFile(m.chat, json.result.female, '', 'Female', m)
 }
 handler.help = ['ppcouple', 'ppcp']
 handler.tags = ['internet']
