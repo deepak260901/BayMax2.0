@@ -20,7 +20,7 @@ Register successfully!
 ├➸ *Name*: ${name}~
 ├➸ *Age*: ${age}
 ├➸ *Sn*: ${sn}
-└─────❁┈[ Zero Two ]┈❁─────
+└─────❁┈[ BayMax ]┈❁─────
 `.trim())
 }
 handler.help = ['daftar', 'reg', 'register'].map(v => v + ' <name>.<age>')
