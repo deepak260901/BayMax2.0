@@ -16,7 +16,7 @@ let handler = async function (m, { text, usedPrefix }) {
 Register successfully!
 
 ┌──❁┈[ REGISTRATION ]┈❁───
-├➸ Successfully registered In ZeroTwo
+├➸ Successfully registered In BayMax Database.
 ├➸ *Name*: ${name}~
 ├➸ *Age*: ${age}
 ├➸ *Sn*: ${sn}
